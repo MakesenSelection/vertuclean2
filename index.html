@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleanVertu - Nettoyage Écologique</title>
+    <title>VERTuCLEAN - Nettoyage Écologique Professionnel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Variables CSS */
+        /* Variables CSS avec les nouvelles couleurs */
         :root {
-            --primary: #2a9d8f;
-            --primary-dark: #1d7874;
-            --secondary: #e9c46a;
+            --primary: #d0e1c1;
+            --primary-dark: #bac697;
+            --secondary: #d7d7ae;
             --light: #f8f9fa;
-            --dark: #264653;
+            --dark: #4a5a3a;
             --text: #333333;
             --text-light: #6c757d;
             --white: #ffffff;
@@ -71,7 +71,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: var(--primary);
+            background-color: var(--primary-dark);
         }
 
         p {
@@ -82,8 +82,8 @@
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background-color: var(--primary);
-            color: var(--white);
+            background-color: var(--primary-dark);
+            color: var(--dark);
             border: none;
             border-radius: 50px;
             font-weight: 600;
@@ -94,7 +94,7 @@
         }
 
         .btn:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--primary);
             transform: translateY(-3px);
         }
 
@@ -104,7 +104,7 @@
         }
 
         .btn-secondary:hover {
-            background-color: #e0b85c;
+            background-color: #d0d09e;
         }
 
         /* Header */
@@ -127,7 +127,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--dark);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -136,6 +136,7 @@
         .logo i {
             margin-right: 10px;
             font-size: 2rem;
+            color: var(--primary-dark);
         }
 
         nav ul {
@@ -155,7 +156,7 @@
         }
 
         nav ul li a:hover {
-            color: var(--primary);
+            color: var(--primary-dark);
         }
 
         .menu-toggle {
@@ -167,22 +168,22 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(42, 157, 143, 0.9), rgba(38, 70, 83, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(135deg, rgba(208, 225, 193, 0.85), rgba(186, 198, 151, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
-            color: var(--white);
+            color: var(--dark);
             padding: 180px 0 120px;
             text-align: center;
         }
 
         .hero h1 {
-            color: var(--white);
+            color: var(--dark);
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
         }
 
         .hero p {
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--dark);
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 2.5rem;
@@ -197,7 +198,7 @@
         /* Services Section */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
@@ -205,8 +206,7 @@
         .service-card {
             background-color: var(--white);
             border-radius: 10px;
-            padding: 40px 30px;
-            text-align: center;
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
@@ -215,10 +215,30 @@
             transform: translateY(-10px);
         }
 
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
         .service-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
         }
 
         .service-card h3 {
@@ -226,9 +246,26 @@
             margin-bottom: 15px;
         }
 
+        .service-features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .service-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .service-features li i {
+            color: var(--primary-dark);
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+
         /* About Section */
         .about {
-            background-color: var(--light);
+            background-color: var(--primary);
         }
 
         .about-content {
@@ -288,7 +325,7 @@
             border-radius: 50%;
             overflow: hidden;
             margin-right: 15px;
-            background-color: var(--primary);
+            background-color: var(--primary-dark);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -333,12 +370,12 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            background-color: var(--primary);
+            background-color: var(--primary-dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
+            color: var(--dark);
             font-size: 1.2rem;
             margin-right: 15px;
         }
@@ -365,8 +402,8 @@
 
         .form-control:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 3px rgba(186, 198, 151, 0.2);
         }
 
         textarea.form-control {
@@ -436,7 +473,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--primary);
+            background-color: var(--primary-dark);
             transform: translateY(-3px);
         }
 
@@ -446,6 +483,18 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
+        }
+
+        /* Badge écologique */
+        .eco-badge {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--dark);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
         }
 
         /* Responsive */
@@ -520,6 +569,10 @@
             .hero p {
                 font-size: 1rem;
             }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -529,7 +582,7 @@
         <div class="container header-container">
             <a href="#" class="logo">
                 <i class="fas fa-leaf"></i>
-                CleanVertu
+                VERTuCLEAN
             </a>
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -563,26 +616,118 @@
         <div class="container">
             <h2>Nos Services</h2>
             <div class="services-grid">
+                <!-- Service 1 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nettoyage résidentiel">
                     </div>
-                    <h3>Nettoyage Résidentiel</h3>
-                    <p>Un nettoyage complet de votre maison avec des produits écologiques qui préservent votre santé et l'environnement.</p>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Nettoyage Résidentiel & Gîtes</h3>
+                        <p>Un nettoyage complet de votre maison avec des produits écologiques qui préservent votre santé et l'environnement.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <strong>Crédit d'impôt</strong> pour les particuliers</li>
+                            <li><i class="fas fa-check"></i> Bilan environnemental inclus</li>
+                            <li><i class="fas fa-check"></i> Identification d'éléments néfastes (bougies industrielles, Téflon, plastiques, WiFi)</li>
+                        </ul>
+                    </div>
                 </div>
+                
+                <!-- Service 2 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nettoyage de bureaux">
                     </div>
-                    <h3>Nettoyage Commercial</h3>
-                    <p>Des solutions de nettoyage professionnel pour vos bureaux, magasins et espaces commerciaux.</p>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Nettoyage de Bureaux & Entreprises</h3>
+                        <p>Des solutions de nettoyage professionnel pour vos bureaux, magasins et espaces commerciaux.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Nettoyage quotidien ou ponctuel</li>
+                            <li><i class="fas fa-check"></i> Produits 100% écologiques</li>
+                            <li><i class="fas fa-check"></i> Adaptation à vos horaires d'ouverture</li>
+                        </ul>
+                    </div>
                 </div>
+                
+                <!-- Service 3 -->
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tree"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1603712610494-49c53e6a94b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nettoyage de véhicules">
                     </div>
-                    <h3>Nettoyage Vert</h3>
-                    <p>Utilisation exclusive de produits biodégradables et de techniques respectueuses de l'environnement.</p>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Nettoyage de Véhicules</h3>
+                        <p>Nettoyage sur place/à domicile de véhicules de particuliers ou professionnels.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Intérieur et/ou extérieur</li>
+                            <li><i class="fas fa-check"></i> Produits écologiques certifiés</li>
+                            <li><i class="fas fa-check"></i> Idéal pour artisans et professionnels</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1583845112207-ae2c6c7c3d8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nettoyage de textiles">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h3>Nettoyage de Textiles</h3>
+                        <p>Nettoyage écologique des canapés, moquettes, matelas et autres textiles d'intérieur.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Utilisation principale de vapeur</li>
+                            <li><i class="fas fa-check"></i> Élimination des acariens et allergènes</li>
+                            <li><i class="fas fa-check"></i> Sans produits chimiques agressifs</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1578681592922-83020c6ab25a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nettoyage de vitres">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-window-restore"></i>
+                        </div>
+                        <h3>Nettoyage de Vitres</h3>
+                        <p>Nettoyage professionnel des vitres, au sol ou en hauteur, avec des techniques sécurisées.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Équipements pour hauteur</li>
+                            <li><i class="fas fa-check"></i> Produits non-toxiques et biodégradables</li>
+                            <li><i class="fas fa-check"></i> Résultats impeccables sans traces</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nettoyage de fin de chantier">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Nettoyage de Fin de Chantier</h3>
+                        <p>Nettoyage post-construction pour un espace immédiatement habitable.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Élimination des poussières et résidus</li>
+                            <li><i class="fas fa-check"></i> Nettoyage en profondeur</li>
+                            <li><i class="fas fa-check"></i> Préparation pour livraison au client</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -591,17 +736,17 @@
     <!-- About Section -->
     <section class="about" id="apropos">
         <div class="container">
-            <h2>À Propos de Nous</h2>
+            <h2>À Propos de VERTuCLEAN</h2>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Notre engagement pour un nettoyage responsable</h3>
-                    <p>Fondée en 2020, CleanVertu s'est donné pour mission de révolutionner l'industrie du nettoyage en proposant des services à la fois efficaces et respectueux de l'environnement.</p>
+                    <p>Fondée en 2020, VERTuCLEAN s'est donné pour mission de révolutionner l'industrie du nettoyage en proposant des services à la fois efficaces et respectueux de l'environnement.</p>
                     <p>Nous croyons fermement qu'un intérieur propre ne doit pas se faire au détriment de notre planète. C'est pourquoi nous utilisons exclusivement des produits écologiques certifiés et des méthodes de nettoyage durables.</p>
                     <p>Notre équipe de professionnels formés s'engage à fournir un service de qualité supérieure tout en minimisant notre impact environnemental.</p>
                     <a href="#contact" class="btn">En savoir plus</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipe CleanVertu">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipe VERTuCLEAN">
                 </div>
             </div>
         </div>
@@ -614,7 +759,7 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "Je suis impressionné par la qualité du service et l'attention portée aux détails. Mon appartement n'a jamais été aussi propre, et en plus avec des produits écologiques !"
+                        "Je suis impressionnée par la qualité du service et l'attention portée aux détails. Mon appartement n'a jamais été aussi propre, et en plus avec des produits écologiques ! Le bilan environnemental m'a permis d'identifier plusieurs sources de pollution dans mon intérieur."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">MD</div>
@@ -626,7 +771,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "CleanVertu nettoie nos bureaux depuis plus d'un an. L'équipe est professionnelle, fiable et utilise des produits qui ne déclenchent pas d'allergies parmi nos employés."
+                        "VERTuCLEAN nettoie nos bureaux depuis plus d'un an. L'équipe est professionnelle, fiable et utilise des produits qui ne déclenchent pas d'allergies parmi nos employés. Le nettoyage de fin de chantier après nos travaux a été impeccable."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">TP</div>
@@ -638,7 +783,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "Enfin une entreprise de nettoyage qui correspond à mes valeurs écologiques ! Le résultat est impeccable et je me sens bien dans ma maison sans produits chimiques agressifs."
+                        "Enfin une entreprise de nettoyage qui correspond à mes valeurs écologiques ! Le résultat est impeccable et je me sens bien dans ma maison sans produits chimiques agressifs. Le nettoyage vapeur de mon canapé a éliminé les allergies de mon fils."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">SL</div>
@@ -687,7 +832,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>contact@cleanvertu.fr</p>
+                            <p>contact@vertuclean.fr</p>
                         </div>
                     </div>
                 </div>
@@ -713,10 +858,12 @@
                             <label for="service">Type de service</label>
                             <select id="service" class="form-control">
                                 <option value="">Sélectionnez un service</option>
-                                <option value="residential">Nettoyage résidentiel</option>
-                                <option value="commercial">Nettoyage commercial</option>
-                                <option value="green">Nettoyage vert</option>
-                                <option value="other">Autre</option>
+                                <option value="residential">Nettoyage résidentiel & gîtes</option>
+                                <option value="commercial">Nettoyage de bureaux & entreprises</option>
+                                <option value="vehicles">Nettoyage de véhicules</option>
+                                <option value="textiles">Nettoyage de textiles</option>
+                                <option value="windows">Nettoyage de vitres</option>
+                                <option value="construction">Nettoyage de fin de chantier</option>
                             </select>
                         </div>
                         
@@ -737,7 +884,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>CleanVertu</h3>
+                    <h3>VERTuCLEAN</h3>
                     <p>Votre partenaire de confiance pour un nettoyage écologique et professionnel.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -761,11 +908,12 @@
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Nettoyage résidentiel</a></li>
-                        <li><a href="#">Nettoyage commercial</a></li>
-                        <li><a href="#">Nettoyage vert</a></li>
-                        <li><a href="#">Nettoyage après construction</a></li>
-                        <li><a href="#">Nettoyage de tapis</a></li>
+                        <li><a href="#">Nettoyage résidentiel & gîtes</a></li>
+                        <li><a href="#">Nettoyage de bureaux</a></li>
+                        <li><a href="#">Nettoyage de véhicules</a></li>
+                        <li><a href="#">Nettoyage de textiles</a></li>
+                        <li><a href="#">Nettoyage de vitres</a></li>
+                        <li><a href="#">Nettoyage fin de chantier</a></li>
                     </ul>
                 </div>
                 
@@ -774,13 +922,13 @@
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> 123 Avenue Verte, 75015 Paris</li>
                         <li><i class="fas fa-phone"></i> 01 23 45 67 89</li>
-                        <li><i class="fas fa-envelope"></i> contact@cleanvertu.fr</li>
+                        <li><i class="fas fa-envelope"></i> contact@vertuclean.fr</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 CleanVertu. Tous droits réservés.</p>
+                <p>&copy; 2023 VERTuCLEAN. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
