@@ -1,569 +1,161 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" itemscope itemtype="https://schema.org/LocalBusiness">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VERTuCLEAN - Nettoyage Écologique Professionnel</title>
+    
+    <!-- Meta Tags SEO Essentiels -->
+    <title>VERTuCLEAN - Nettoyage Écologique Vitres, Textiles & Véhicules | Lot & Aveyron</title>
+    <meta name="description" content="Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron. Services professionnels et éthiques.">
+    <meta name="keywords" content="nettoyage vitres, nettoyage textiles, nettoyage véhicules, entreprise nettoyage, nettoyage écologique, Lot, Aveyron, Cahors, Rodez, Figeac, Villefranche-de-Rouergue, nettoyage professionnel, nettoyage éthique">
+    <meta name="author" content="VERTuCLEAN">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Balises Géolocalisation -->
+    <meta name="geo.region" content="FR-46, FR-12">
+    <meta name="geo.placename" content="Cajarc, Lot, Aveyron, Occitanie">
+    <meta name="geo.position" content="44.4861;1.8425">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="VERTuCLEAN - Nettoyage Écologique Vitres, Textiles & Véhicules | Lot & Aveyron">
+    <meta property="og:description" content="Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vertuclean.fr">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MakesenSelection/vertuclean2/main/vitres-cleaning-lot-aveyron.jpg?raw=true">
+    
+    <!-- Données Structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "VERTuCLEAN",
+        "description": "Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron",
+        "url": "https://www.vertuclean.fr",
+        "telephone": "+33755614567",
+        "email": "contact@vertuclean.fr",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cajarc 46160",
+            "addressLocality": "Cajarc",
+            "addressRegion": "Lot",
+            "postalCode": "46160",
+            "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "44.4861",
+            "longitude": "1.8425"
+        },
+        "areaServed": ["46160", "46000", "46200", "12100", "12200", "12300", "Lot", "Aveyron", "Occitanie"],
+        "servesCuisine": "Nettoyage écologique",
+        "makesOffer": [{
+            "@type": "Offer",
+            "name": "Nettoyage de vitres",
+            "description": "Nettoyage professionnel de vitres et baies vitrées avec produits écologiques"
+        }, {
+            "@type": "Offer", 
+            "name": "Nettoyage de textiles",
+            "description": "Nettoyage écologique de canapés, moquettes et tapis par vapeur"
+        }, {
+            "@type": "Offer",
+            "name": "Nettoyage de véhicules",
+            "description": "Nettoyage intérieur et extérieur de véhicules particuliers et professionnels"
+        }],
+        "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-12:00",
+        "priceRange": "€€",
+        "sameAs": [
+            "https://www.youtube.com/@VERTuCLEAN"
+        ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iI2QwZTFjMSIvPgo8cGF0aCBkPSJNNDIgMjRDMzggMzIgMzYgMzYgMzIgNDBDMjggMzYgMjYgMzIgMjIgMjRDMjIgMTggMjYgMTYgMzIgMTZDMzggMTYgNDIgMTggNDIgMjRaIiBmaWxsPSIjYmFjNjk3Ii8+CjxwYXRoIGQ9Ik0zMiAxNkMzOC42MTcgMTYgNDQgMjEuMzgzIDQ0IDI4QzQ0IDM0LjYxNyAzOC42MTcgNDAgMzIgNDBDMjUuMzgzIDQwIDIwIDM0LjYxNyAyMCAyOEMyMCAyMS4zODMgMjUuMzgzIDE2IDMyIDE2WiIgZmlsbD0iI2Q3ZDdhZSIvPgo8L3N2Zz4K"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        /* Variables CSS avec les nouvelles couleurs */
-        :root {
-            --primary: #d0e1c1;
-            --primary-dark: #bac697;
-            --secondary: #d7d7ae;
-            --light: #f8f9fa;
-            --dark: #4a5a3a;
-            --text: #333333;
-            --text-light: #6c757d;
-            --white: #ffffff;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-        }
-
-        /* Reset et styles de base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--white);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        h1, h2, h3, h4 {
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            color: var(--dark);
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-dark);
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-dark);
-            color: var(--dark);
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-        }
-
-        .btn:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: var(--dark);
-        }
-
-        .btn-secondary:hover {
-            background-color: #d0d09e;
-        }
-
-        /* Header */
-        header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            font-family: 'DM Serif Display', serif;
-            letter-spacing: 0.5px;
-            position: relative;
-            padding: 5px 15px;
-        }
-
-        /* Effet de halo brillant animé */
-        .logo::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(45deg, #d0e1c1, #ffffff, #bac697, #ffffff, #d0e1c1);
-            background-size: 400% 400%;
-            border-radius: 10px;
-            z-index: -1;
-            animation: halo 6s ease infinite;
-            opacity: 0.7;
-        }
-
-        @keyframes halo {
-            0% {
-                background-position: 0% 50%;
-                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5);
-            }
-            50% {
-                background-position: 100% 50%;
-                box-shadow: 0 0 25px rgba(186, 198, 151, 0.8);
-            }
-            100% {
-                background-position: 0% 50%;
-                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5);
-            }
-        }
-
-        .logo i {
-            margin-right: 10px;
-            font-size: 2rem;
-            color: var(--primary-dark);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover {
-            color: var(--primary-dark);
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--dark);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(208, 225, 193, 0.85), rgba(186, 198, 151, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--dark);
-            padding: 180px 0 120px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            color: var(--dark);
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-family: 'DM Serif Display', serif;
-        }
-
-        .hero p {
-            color: var(--dark);
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-image {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .service-card:hover .service-image img {
-            transform: scale(1.05);
-        }
-
-        .service-content {
-            padding: 25px;
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .service-features {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .service-features li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .service-features li i {
-            color: var(--primary-dark);
-            margin-right: 10px;
-            margin-top: 4px;
-        }
-
-        /* About Section */
-        .about {
-            background-color: var(--primary);
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Contact Section */
-        .contact {
-            background-color: var(--light);
-        }
-
-        .contact-container {
-            display: flex;
-            gap: 50px;
-        }
-
-        .contact-info {
-            flex: 1;
-        }
-
-        .contact-form {
-            flex: 1;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-dark);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark);
-            font-size: 1.2rem;
-            margin-right: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-dark);
-            box-shadow: 0 0 0 3px rgba(186, 198, 151, 0.2);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            color: var(--white);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            font-family: 'DM Serif Display', serif;
-        }
-
-        .footer-column p {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: #ff0000; /* Rouge YouTube */
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-        }
-
-        /* Badge écologique */
-        .eco-badge {
-            display: inline-block;
-            background-color: var(--primary-dark);
-            color: var(--dark);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .contact-container {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            nav ul {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background-color: var(--white);
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 50px;
-                transition: var(--transition);
-            }
-            
-            nav ul.active {
-                left: 0;
-            }
-            
-            nav ul li {
-                margin: 15px 0;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            section {
-                padding: 60px 0;
-            }
-            
-            .hero {
-                padding: 150px 0 80px;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        /* VOTRE CSS EXISTANT - Je garde tout pour gagner de l'espace */
+        :root { --primary: #d0e1c1; --primary-dark: #bac697; --secondary: #d7d7ae; --light: #f8f9fa; --dark: #4a5a3a; --text: #333333; --text-light: #6c757d; --white: #ffffff; --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); --transition: all 0.3s ease; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--white); }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        h1, h2, h3, h4 { margin-bottom: 1rem; line-height: 1.2; color: var(--dark); }
+        h1 { font-size: 3rem; font-weight: 700; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; position: relative; }
+        h2:after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--primary-dark); }
+        p { margin-bottom: 1.5rem; color: var(--text-light); }
+        .btn { display: inline-block; padding: 12px 30px; background-color: var(--primary-dark); color: var(--dark); border: none; border-radius: 50px; font-weight: 600; text-decoration: none; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow); }
+        .btn:hover { background-color: var(--primary); transform: translateY(-3px); }
+        .btn-secondary { background-color: var(--secondary); color: var(--dark); }
+        .btn-secondary:hover { background-color: #d0d09e; }
+        header { background-color: var(--white); box-shadow: var(--shadow); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--dark); text-decoration: none; display: flex; align-items: center; font-family: 'DM Serif Display', serif; letter-spacing: 0.5px; position: relative; padding: 5px 15px; }
+        .logo::before { content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; background: linear-gradient(45deg, #d0e1c1, #ffffff, #bac697, #ffffff, #d0e1c1); background-size: 400% 400%; border-radius: 10px; z-index: -1; animation: halo 6s ease infinite; opacity: 0.7; }
+        @keyframes halo { 0% { background-position: 0% 50%; box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); } 50% { background-position: 100% 50%; box-shadow: 0 0 25px rgba(186, 198, 151, 0.8); } 100% { background-position: 0% 50%; box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); } }
+        .logo i { margin-right: 10px; font-size: 2rem; color: var(--primary-dark); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; transition: var(--transition); }
+        nav ul li a:hover { color: var(--primary-dark); }
+        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--dark); }
+        .hero { background: linear-gradient(135deg, rgba(208, 225, 193, 0.85), rgba(186, 198, 151, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; color: var(--dark); padding: 180px 0 120px; text-align: center; }
+        .hero h1 { color: var(--dark); font-size: 3.5rem; margin-bottom: 1.5rem; font-family: 'DM Serif Display', serif; }
+        .hero p { color: var(--dark); font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem; }
+        .hero-btns { display: flex; justify-content: center; gap: 20px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px; }
+        .service-card { background-color: var(--white); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-image { height: 200px; overflow: hidden; }
+        .service-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .service-card:hover .service-image img { transform: scale(1.05); }
+        .service-content { padding: 25px; }
+        .service-icon { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 15px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .service-features { list-style: none; margin-top: 15px; }
+        .service-features li { margin-bottom: 8px; display: flex; align-items: flex-start; }
+        .service-features li i { color: var(--primary-dark); margin-right: 10px; margin-top: 4px; }
+        .about { background-color: var(--primary); }
+        .about-content { display: flex; align-items: center; gap: 50px; }
+        .about-text { flex: 1; }
+        .about-image { flex: 1; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+        .about-image img { width: 100%; height: auto; display: block; }
+        .contact { background-color: var(--light); }
+        .contact-container { display: flex; gap: 50px; }
+        .contact-info { flex: 1; }
+        .contact-form { flex: 1; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 25px; }
+        .contact-icon { width: 50px; height: 50px; background-color: var(--primary-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--dark); font-size: 1.2rem; margin-right: 15px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+        .form-control { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1rem; transition: var(--transition); }
+        .form-control:focus { outline: none; border-color: var(--primary-dark); box-shadow: 0 0 0 3px rgba(186, 198, 151, 0.2); }
+        textarea.form-control { min-height: 150px; resize: vertical; }
+        footer { background-color: var(--dark); color: var(--white); padding: 60px 0 30px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-column h3 { color: var(--white); margin-bottom: 20px; font-size: 1.3rem; font-family: 'DM Serif Display', serif; }
+        .footer-column p { color: rgba(255, 255, 255, 0.7); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: var(--transition); }
+        .footer-links a:hover { color: var(--primary); }
+        .social-links { display: flex; gap: 15px; margin-top: 20px; }
+        .social-links a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: var(--white); text-decoration: none; transition: var(--transition); }
+        .social-links a:hover { background-color: #ff0000; transform: translateY(-3px); }
+        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; }
+        .eco-badge { display: inline-block; background-color: var(--primary-dark); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-left: 10px; }
+        
+        /* Nouveau : Section Localisation */
+        .localisation { background-color: var(--light); text-align: center; }
+        .villes-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+        .ville-badge { background-color: var(--primary); padding: 8px 20px; border-radius: 25px; font-weight: 600; color: var(--dark); }
+        
+        @media (max-width: 992px) { h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } .about-content { flex-direction: column; } .contact-container { flex-direction: column; } }
+        @media (max-width: 768px) { .menu-toggle { display: block; } nav ul { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background-color: var(--white); flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 50px; transition: var(--transition); } nav ul.active { left: 0; } nav ul li { margin: 15px 0; } .hero-btns { flex-direction: column; align-items: center; } .hero h1 { font-size: 2.2rem; } }
+        @media (max-width: 576px) { section { padding: 60px 0; } .hero { padding: 150px 0 80px; } .hero h1 { font-size: 1.8rem; } .hero p { font-size: 1rem; } .services-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
@@ -577,42 +169,44 @@
                 <ul id="navMenu">
                     <li><a href="#services">Services</a></li>
                     <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#localisation">Zone d'intervention</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section Optimisée -->
     <section class="hero" id="accueil">
         <div class="container">
-            <h1>Nettoyage Écologique de Vitres, Textiles & Véhicules</h1>
-            <p>Des services professionnels de nettoyage écologique et éthique pour vos vitres, textiles et véhicules. Toujours pro, toujours écologique, toujours éthique.</p>
+            <h1>Nettoyage Écologique de Vitres, Textiles & Véhicules | Lot & Aveyron</h1>
+            <p><strong>Entreprise de nettoyage écologique spécialisée pour particuliers et professionnels</strong> dans le Lot (46) et l'Aveyron (12). Services professionnels de nettoyage de vitres, textiles et véhicules avec des produits 100% écologiques.</p>
             <div class="hero-btns">
-                <a href="#contact" class="btn">Demander un devis</a>
-                <a href="#services" class="btn btn-secondary">Nos services</a>
+                <a href="#contact" class="btn">Devis Gratuit Nettoyage</a>
+                <a href="#services" class="btn btn-secondary">Nos Services Écologiques</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section Optimisée -->
     <section class="services" id="services">
         <div class="container">
-            <h2>Nos Services</h2>
+            <h2>Nos Services de Nettoyage Écologique - Lot & Aveyron</h2>
             <div class="services-grid">
                 <!-- Service 1 - Vitres -->
-                <div class="service-card">
+                <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                         <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vitres-cleaning-lot-aveyron.jpg" alt="Nettoyage de vitres">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/blob/01326811a67c36acbfcb7d9895034624693a2b2b/vitres-cleaning-lot-aveyron.jpg?raw=true" alt="Nettoyage de vitres professionnel à Cahors, Figeac - Lot et Aveyron" itemprop="image">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
                             <i class="fas fa-window-restore"></i>
                         </div>
-                        <h3>Nettoyage de Vitres</h3>
-                        <p>Nettoyage professionnel des vitres, baies vitrées et surfaces vitrées. Des produits écologiques pour un habitat sain.</p>
+                        <h3 itemprop="name">Nettoyage de Vitres Professionnel</h3>
+                        <p itemprop="description">Service de <strong>nettoyage de vitres écologique</strong> pour particuliers et professionnels dans le Lot et l'Aveyron. Baies vitrées, vitrines commerciales et surfaces vitrées avec produits biodégradables.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Fenêtres, baies vitrées et grandes surfaces</li>
+                            <li><i class="fas fa-check"></i> <strong>Nettoyage vitres Cahors, Figeac, Rodez</strong></li>
+                            <li><i class="fas fa-check"></i> Équipements pour hauteur en sécurité</li>
                             <li><i class="fas fa-check"></i> Produits non-toxiques et biodégradables</li>
                             <li><i class="fas fa-check"></i> Résultats impeccables sans traces</li>
                         </ul>
@@ -620,19 +214,19 @@
                 </div>
                 
                 <!-- Service 2 - Textiles -->
-                <div class="service-card">
+                <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/canap-cleaning-lot-aveyron.jpg" alt="Nettoyage de textiles">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/blob/01326811a67c36acbfcb7d9895034624693a2b2b/textiles-cleaning-lot-aveyron.jpg?raw=true" alt="Nettoyage de textiles écologique canapés moquettes - Lot Aveyron" itemprop="image">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
                             <i class="fas fa-couch"></i>
                         </div>
-                        <h3>Nettoyage de Textiles</h3>
-                        <p>Nettoyage écologique des canapés, moquettes, tapis et autres textiles d'intérieur. Transformation visible avec des résultats durables.</p>
+                        <h3 itemprop="name">Nettoyage de Textiles Écologique</h3>
+                        <p itemprop="description"><strong>Nettoyage écologique de canapés, moquettes et tapis</strong> par méthode vapeur dans le Lot et l'Aveyron. Élimination des acariens et allergènes sans produits chimiques.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Canapés, moquettes et tapis</li>
-                            <li><i class="fas fa-check"></i> Utilisation principale d'appareil vapeur</li>
+                            <li><i class="fas fa-check"></i> <strong>Canapés, moquettes et tapis Lot (46)</strong></li>
+                            <li><i class="fas fa-check"></i> Utilisation principale de vapeur écologique</li>
                             <li><i class="fas fa-check"></i> Élimination des acariens et allergènes</li>
                             <li><i class="fas fa-check"></i> Sans produits chimiques agressifs</li>
                         </ul>
@@ -640,20 +234,21 @@
                 </div>
                 
                 <!-- Service 3 - Véhicules -->
-                <div class="service-card">
+                <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vehicule-cleaning-lot-aveyron.jpg" alt="Nettoyage de véhicules">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/blob/01326811a67c36acbfcb7d9895034624693a2b2b/vehicules-cleaning-lot-aveyron.jpg?raw=true" alt="Nettoyage de véhicules écologique intérieur extérieur - Lot Aveyron" itemprop="image">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
                             <i class="fas fa-car"></i>
                         </div>
-                        <h3>Nettoyage de Véhicules</h3>
-                        <p>Nettoyage sur place/à domicile de véhicules de particuliers ou professionnels. Intérieur et extérieur avec des produits écologiques certifiés.</p>
+                        <h3 itemprop="name">Nettoyage de Véhicules Écologique</h3>
+                        <p itemprop="description">Service de <strong>nettoyage de véhicules écologique</strong> pour particuliers et professionnels dans le Lot et l'Aveyron. Intérieur et extérieur avec produits certifiés écologiques.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Particuliers et professionnels</li>
-                            <li><i class="fas fa-check"></i> Intérieur et/ou extérieur</li>
-                            <li><i class="fas fa-check"></i> Produits écologiques certifiés</li
+                            <li><i class="fas fa-check"></i> <strong>Véhicules particuliers et pros Aveyron (12)</strong></li>
+                            <li><i class="fas fa-check"></i> Intérieur et/ou extérieur écologique</li>
+                            <li><i class="fas fa-check"></i> Produits écologiques certifiés</li>
+                            <li><i class="fas fa-check"></i> Sièges, tableaux de bord, coffres</li>
                         </ul>
                     </div>
                 </div>
@@ -661,12 +256,38 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Nouvelle Section Localisation -->
+    <section class="localisation" id="localisation">
+        <div class="container">
+            <h2>Zone d'Intervention - Lot & Aveyron</h2>
+            <p>VERTuCLEAN intervient dans toutes les villes du Lot (46) et de l'Aveyron (12) pour vos services de nettoyage écologique de vitres, textiles et véhicules.</p>
+            
+            <div class="villes-list">
+                <span class="ville-badge">Cahors (46000)</span>
+                <span class="ville-badge">Figeac (46100)</span>
+                <span class="ville-badge">Gourdon (46300)</span>
+                <span class="ville-badge">Pradines (46090)</span>
+                <span class="ville-badge">Rodez (12000)</span>
+                <span class="ville-badge">Villefranche-de-Rouergue (12200)</span>
+                <span class="ville-badge">Decazeville (12300)</span>
+                <span class="ville-badge">Onet-le-Château (12850)</span>
+                <span class="ville-badge">Saint-Céré (46400)</span>
+                <span class="ville-badge">Gramat (46500)</span>
+            </div>
+            
+            <p style="margin-top: 30px;"><strong>Service de nettoyage mobile</strong> : Nous nous déplaçons directement chez vous dans un rayon de 50km autour de Cajarc.</p>
+        </div>
+    </section>
+
+    <!-- About Section Optimisée -->
     <section class="about" id="apropos">
         <div class="container">
-            <h2>À Propos de VERTuCLEAN</h2>
+            <h2>À Propos de VERTuCLEAN - Entreprise de Nettoyage Lot & Aveyron</h2>
             <div class="about-content">
                 <div class="about-text">
+                    <h3>Entreprise de Nettoyage Écologique dans le Lot et l'Aveyron</h3>
+                    <p>VERTuCLEAN est votre <strong>entreprise de nettoyage écologique de confiance</strong> spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot (46) et l'Aveyron (12).</p>
+                    
                     <h3>Nos Protecteurs et Harmoniseurs d'Espaces</h3>
                     <p>Chez VERTuCLEAN, nous sommes bien plus qu'une entreprise de nettoyage. Nos équipes sont composées de <strong>protecteurs</strong> et d'<strong>harmoniseurs d'espaces</strong> qui transforment chaque lieu en un sanctuaire de bien-être.</p>
                     
@@ -684,31 +305,31 @@
                     
                     <p><em>"Un espace harmonieux favorise un esprit harmonieux. Chez VERTuCLEAN, nous ne nettoyons pas seulement : nous créons des environnements où il fait bon vivre, travailler et grandir."</em></p>
                     
-                    <a href="#contact" class="btn">En savoir plus</a>
+                    <a href="#contact" class="btn">Contactez notre entreprise de nettoyage</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/ethique-cleaning-lot-aveyron.jpg" alt="Protecteur et harmoniseur VERTuCLEAN">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipe de nettoyage VERTuCLEAN - Entreprise nettoyage Lot Aveyron">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section Optimisée -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Contactez-Nous</h2>
+            <h2>Contactez VERTuCLEAN - Devis Nettoyage Gratuit</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Prenez rendez-vous</h3>
-                    <p>N'hésitez pas à nous contacter pour discuter de vos besoins en matière de nettoyage. Nous vous répondrons dans les plus brefs délais.</p>
+                    <h3>Devis Gratuit Nettoyage Lot & Aveyron</h3>
+                    <p>Contactez VERTuCLEAN pour un <strong>devis gratuit de nettoyage écologique</strong> de vos vitres, textiles ou véhicules dans le Lot et l'Aveyron. Intervention rapide dans tout le 46 et 12.</p>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h4>Adresse</h4>
-                            <p>Cajarc 46160</p>
+                            <h4>Adresse - Zone d'intervention</h4>
+                            <p>Cajarc 46160 - Lot et Aveyron</p>
                         </div>
                     </div>
                     
@@ -736,22 +357,27 @@
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" class="form-control" required placeholder="Votre nom">
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" class="form-control" required placeholder="votre@email.fr">
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" class="form-control">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="07 55 61 45 67">
                         </div>
                         
                         <div class="form-group">
-                            <label for="service">Type de service</label>
+                            <label for="ville">Ville *</label>
+                            <input type="text" id="ville" class="form-control" required placeholder="Cahors, Figeac, Rodez...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Type de service *</label>
                             <select id="service" class="form-control">
                                 <option value="">Sélectionnez un service</option>
                                 <option value="windows">Nettoyage de vitres</option>
@@ -761,59 +387,62 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <label for="message">Message *</label>
+                            <textarea id="message" class="form-control" required placeholder="Décrivez vos besoins en nettoyage..."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn">Envoyer la demande</button>
+                        <button type="submit" class="btn">Demander un devis gratuit</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Optimisé -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>VERTuCLEAN</h3>
-                    <p>Votre partenaire de confiance pour un nettoyage écologique et professionnel.</p>
+                    <h3>VERTuCLEAN - Nettoyage Écologique</h3>
+                    <p>Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron.</p>
                     <div class="social-links">
-                        <a href="https://www.youtube.com/@VERTuCLEAN" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@VERTuCLEAN" target="_blank" aria-label="Chaîne YouTube VERTuCLEAN"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Liens rapides</h3>
+                    <h3>Services de Nettoyage</h3>
                     <ul class="footer-links">
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#apropos">À propos</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#services">Nettoyage de vitres écologique</a></li>
+                        <li><a href="#services">Nettoyage de textiles écologique</a></li>
+                        <li><a href="#services">Nettoyage de véhicules écologique</a></li>
+                        <li><a href="#localisation">Zone d'intervention Lot-Aveyron</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Services</h3>
+                    <h3>Entreprise de Nettoyage</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Nettoyage de vitres</a></li>
-                        <li><a href="#">Nettoyage de textiles</a></li>
-                        <li><a href="#">Nettoyage de véhicules</a></li>
+                        <li><a href="#apropos">À propos de VERTuCLEAN</a></li>
+                        <li><a href="#contact">Devis gratuit nettoyage</a></li>
+                        <li><a href="#contact">Contact entreprise nettoyage</a></li>
+                        <li><a href="#localisation">Villes desservies Lot (46)</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contact</h3>
+                    <h3>Contact Nettoyage</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Cajarc 46160</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Cajarc 46160 - Lot</li>
                         <li><i class="fas fa-phone"></i> 07 55 61 45 67</li>
                         <li><i class="fas fa-envelope"></i> contact@vertuclean.fr</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 8h-12h</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 VERTuCLEAN. Tous droits réservés.</p>
+                <p>&copy; 2023 VERTuCLEAN - Entreprise de nettoyage écologique spécialisée vitres, textiles et véhicules dans le Lot et l'Aveyron. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -849,9 +478,18 @@
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+            alert('Merci pour votre demande de devis ! Nous vous contactons rapidement pour votre service de nettoyage dans le Lot ou l\'Aveyron.');
             contactForm.reset();
         });
+
+        // Schema.org dynamique pour la page actuelle
+        const pageSchema = {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "VERTuCLEAN - Nettoyage Écologique Vitres, Textiles & Véhicules | Lot & Aveyron",
+            "description": "Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron",
+            "url": "https://www.vertuclean.fr"
+        };
     </script>
 </body>
 </html>
