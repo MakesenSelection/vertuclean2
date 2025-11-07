@@ -21,7 +21,7 @@
     <meta property="og:description" content="Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.vertuclean.fr">
-    <meta property="og:image" content="https://raw.githubusercontent.com/MakesenSelection/vertuclean2/main/vitres-cleaning-lot-aveyron.jpg?raw=true">
+    <meta property="og:image" content="https://github.com/MakesenSelection/vertuclean2/raw/main/vitres-cleaning-lot-aveyron.jpg">
     
     <!-- Données Structurées Schema.org -->
     <script type="application/ld+json">
@@ -73,86 +73,608 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        /* VOTRE CSS EXISTANT - Je garde tout pour gagner de l'espace */
-        :root { --primary: #d0e1c1; --primary-dark: #bac697; --secondary: #d7d7ae; --light: #f8f9fa; --dark: #4a5a3a; --text: #333333; --text-light: #6c757d; --white: #ffffff; --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); --transition: all 0.3s ease; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--white); }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        section { padding: 80px 0; }
-        h1, h2, h3, h4 { margin-bottom: 1rem; line-height: 1.2; color: var(--dark); }
-        h1 { font-size: 3rem; font-weight: 700; }
-        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; position: relative; }
-        h2:after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--primary-dark); }
-        p { margin-bottom: 1.5rem; color: var(--text-light); }
-        .btn { display: inline-block; padding: 12px 30px; background-color: var(--primary-dark); color: var(--dark); border: none; border-radius: 50px; font-weight: 600; text-decoration: none; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow); }
-        .btn:hover { background-color: var(--primary); transform: translateY(-3px); }
-        .btn-secondary { background-color: var(--secondary); color: var(--dark); }
-        .btn-secondary:hover { background-color: #d0d09e; }
-        header { background-color: var(--white); box-shadow: var(--shadow); position: fixed; width: 100%; top: 0; z-index: 1000; }
-        .header-container { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-        .logo { font-size: 1.8rem; font-weight: 700; color: var(--dark); text-decoration: none; display: flex; align-items: center; font-family: 'DM Serif Display', serif; letter-spacing: 0.5px; position: relative; padding: 5px 15px; }
-        .logo::before { content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; background: linear-gradient(45deg, #d0e1c1, #ffffff, #bac697, #ffffff, #d0e1c1); background-size: 400% 400%; border-radius: 10px; z-index: -1; animation: halo 6s ease infinite; opacity: 0.7; }
-        @keyframes halo { 0% { background-position: 0% 50%; box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); } 50% { background-position: 100% 50%; box-shadow: 0 0 25px rgba(186, 198, 151, 0.8); } 100% { background-position: 0% 50%; box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); } }
-        .logo i { margin-right: 10px; font-size: 2rem; color: var(--primary-dark); }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 30px; }
-        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; transition: var(--transition); }
-        nav ul li a:hover { color: var(--primary-dark); }
-        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--dark); }
-        .hero { background: linear-gradient(135deg, rgba(208, 225, 193, 0.85), rgba(186, 198, 151, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; color: var(--dark); padding: 180px 0 120px; text-align: center; }
-        .hero h1 { color: var(--dark); font-size: 3.5rem; margin-bottom: 1.5rem; font-family: 'DM Serif Display', serif; }
-        .hero p { color: var(--dark); font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem; }
-        .hero-btns { display: flex; justify-content: center; gap: 20px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px; }
-        .service-card { background-color: var(--white); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
-        .service-card:hover { transform: translateY(-10px); }
-        .service-image { height: 200px; overflow: hidden; }
-        .service-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .service-card:hover .service-image img { transform: scale(1.05); }
-        .service-content { padding: 25px; }
-        .service-icon { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 15px; }
-        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
-        .service-features { list-style: none; margin-top: 15px; }
-        .service-features li { margin-bottom: 8px; display: flex; align-items: flex-start; }
-        .service-features li i { color: var(--primary-dark); margin-right: 10px; margin-top: 4px; }
-        .about { background-color: var(--primary); }
-        .about-content { display: flex; align-items: center; gap: 50px; }
-        .about-text { flex: 1; }
-        .about-image { flex: 1; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
-        .about-image img { width: 100%; height: auto; display: block; }
-        .contact { background-color: var(--light); }
-        .contact-container { display: flex; gap: 50px; }
-        .contact-info { flex: 1; }
-        .contact-form { flex: 1; }
-        .contact-item { display: flex; align-items: center; margin-bottom: 25px; }
-        .contact-icon { width: 50px; height: 50px; background-color: var(--primary-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--dark); font-size: 1.2rem; margin-right: 15px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
-        .form-control { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1rem; transition: var(--transition); }
-        .form-control:focus { outline: none; border-color: var(--primary-dark); box-shadow: 0 0 0 3px rgba(186, 198, 151, 0.2); }
-        textarea.form-control { min-height: 150px; resize: vertical; }
-        footer { background-color: var(--dark); color: var(--white); padding: 60px 0 30px; }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-column h3 { color: var(--white); margin-bottom: 20px; font-size: 1.3rem; font-family: 'DM Serif Display', serif; }
-        .footer-column p { color: rgba(255, 255, 255, 0.7); }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 10px; }
-        .footer-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: var(--transition); }
-        .footer-links a:hover { color: var(--primary); }
-        .social-links { display: flex; gap: 15px; margin-top: 20px; }
-        .social-links a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: var(--white); text-decoration: none; transition: var(--transition); }
-        .social-links a:hover { background-color: #ff0000; transform: translateY(-3px); }
-        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; }
-        .eco-badge { display: inline-block; background-color: var(--primary-dark); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-left: 10px; }
+        :root { 
+            --primary: #d0e1c1; 
+            --primary-dark: #bac697; 
+            --secondary: #d7d7ae; 
+            --light: #f8f9fa; 
+            --dark: #4a5a3a; 
+            --text: #333333; 
+            --text-light: #6c757d; 
+            --white: #ffffff; 
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+            --transition: all 0.3s ease; 
+        }
         
-        /* Nouveau : Section Localisation */
-        .localisation { background-color: var(--light); text-align: center; }
-        .villes-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
-        .ville-badge { background-color: var(--primary); padding: 8px 20px; border-radius: 25px; font-weight: 600; color: var(--dark); }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         
-        @media (max-width: 992px) { h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } .about-content { flex-direction: column; } .contact-container { flex-direction: column; } }
-        @media (max-width: 768px) { .menu-toggle { display: block; } nav ul { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background-color: var(--white); flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 50px; transition: var(--transition); } nav ul.active { left: 0; } nav ul li { margin: 15px 0; } .hero-btns { flex-direction: column; align-items: center; } .hero h1 { font-size: 2.2rem; } }
-        @media (max-width: 576px) { section { padding: 60px 0; } .hero { padding: 150px 0 80px; } .hero h1 { font-size: 1.8rem; } .hero p { font-size: 1rem; } .services-grid { grid-template-columns: 1fr; } }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text); 
+            background-color: var(--white); 
+        }
+        
+        .container { 
+            width: 100%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        
+        section { 
+            padding: 80px 0; 
+        }
+        
+        h1, h2, h3, h4 { 
+            margin-bottom: 1rem; 
+            line-height: 1.2; 
+            color: var(--dark); 
+        }
+        
+        h1 { 
+            font-size: 3rem; 
+            font-weight: 700; 
+        }
+        
+        h2 { 
+            font-size: 2.5rem; 
+            text-align: center; 
+            margin-bottom: 3rem; 
+            position: relative; 
+        }
+        
+        h2:after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 80px; 
+            height: 4px; 
+            background-color: var(--primary-dark); 
+        }
+        
+        p { 
+            margin-bottom: 1.5rem; 
+            color: var(--text-light); 
+        }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 12px 30px; 
+            background-color: var(--primary-dark); 
+            color: var(--dark); 
+            border: none; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            cursor: pointer; 
+            transition: var(--transition); 
+            box-shadow: var(--shadow); 
+        }
+        
+        .btn:hover { 
+            background-color: var(--primary); 
+            transform: translateY(-3px); 
+        }
+        
+        .btn-secondary { 
+            background-color: var(--secondary); 
+            color: var(--dark); 
+        }
+        
+        .btn-secondary:hover { 
+            background-color: #d0d09e; 
+        }
+        
+        /* Header */
+        header { 
+            background-color: var(--white); 
+            box-shadow: var(--shadow); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        
+        .header-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 20px 0; 
+        }
+        
+        .logo { 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            color: var(--dark); 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center; 
+            font-family: 'DM Serif Display', serif; 
+            letter-spacing: 0.5px; 
+            position: relative; 
+            padding: 5px 15px; 
+        }
+        
+        .logo::before { 
+            content: ''; 
+            position: absolute; 
+            top: -5px; 
+            left: -5px; 
+            right: -5px; 
+            bottom: -5px; 
+            background: linear-gradient(45deg, #d0e1c1, #ffffff, #bac697, #ffffff, #d0e1c1); 
+            background-size: 400% 400%; 
+            border-radius: 10px; 
+            z-index: -1; 
+            animation: halo 6s ease infinite; 
+            opacity: 0.7; 
+        }
+        
+        @keyframes halo { 
+            0% { 
+                background-position: 0% 50%; 
+                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); 
+            } 
+            50% { 
+                background-position: 100% 50%; 
+                box-shadow: 0 0 25px rgba(186, 198, 151, 0.8); 
+            } 
+            100% { 
+                background-position: 0% 50%; 
+                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); 
+            } 
+        }
+        
+        .logo i { 
+            margin-right: 10px; 
+            font-size: 2rem; 
+            color: var(--primary-dark); 
+        }
+        
+        nav ul { 
+            display: flex; 
+            list-style: none; 
+        }
+        
+        nav ul li { 
+            margin-left: 30px; 
+        }
+        
+        nav ul li a { 
+            text-decoration: none; 
+            color: var(--dark); 
+            font-weight: 500; 
+            transition: var(--transition); 
+        }
+        
+        nav ul li a:hover { 
+            color: var(--primary-dark); 
+        }
+        
+        .menu-toggle { 
+            display: none; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+            color: var(--dark); 
+        }
+        
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(135deg, rgba(208, 225, 193, 0.85), rgba(186, 198, 151, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+            color: var(--dark); 
+            padding: 180px 0 120px; 
+            text-align: center; 
+        }
+        
+        .hero-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-main-title {
+            color: var(--dark); 
+            font-size: 3.5rem; 
+            margin-bottom: 0.5rem; 
+            font-family: 'DM Serif Display', serif; 
+        }
+        
+        .hero-subtitle {
+            color: var(--dark);
+            font-size: 2rem;
+            font-family: 'DM Serif Display', serif;
+            font-weight: normal;
+            margin-top: 0;
+        }
+        
+        .hero p { 
+            color: var(--dark); 
+            font-size: 1.2rem; 
+            max-width: 700px; 
+            margin: 0 auto 2.5rem; 
+        }
+        
+        .hero-btns { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+        
+        /* Services Section */
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
+        
+        .service-card { 
+            background-color: var(--white); 
+            border-radius: 10px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+            transition: var(--transition); 
+        }
+        
+        .service-card:hover { 
+            transform: translateY(-10px); 
+        }
+        
+        .service-image { 
+            height: 200px; 
+            overflow: hidden; 
+        }
+        
+        .service-image img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: var(--transition); 
+        }
+        
+        .service-card:hover .service-image img { 
+            transform: scale(1.05); 
+        }
+        
+        .service-content { 
+            padding: 25px; 
+        }
+        
+        .service-icon { 
+            font-size: 2.5rem; 
+            color: var(--primary-dark); 
+            margin-bottom: 15px; 
+        }
+        
+        .service-card h3 { 
+            font-size: 1.5rem; 
+            margin-bottom: 15px; 
+        }
+        
+        .service-features { 
+            list-style: none; 
+            margin-top: 15px; 
+        }
+        
+        .service-features li { 
+            margin-bottom: 8px; 
+            display: flex; 
+            align-items: flex-start; 
+        }
+        
+        .service-features li i { 
+            color: var(--primary-dark); 
+            margin-right: 10px; 
+            margin-top: 4px; 
+        }
+        
+        /* About Section */
+        .about { 
+            background-color: var(--primary); 
+        }
+        
+        .about-content { 
+            display: flex; 
+            align-items: center; 
+            gap: 50px; 
+        }
+        
+        .about-text { 
+            flex: 1; 
+        }
+        
+        .about-image { 
+            flex: 1; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+        }
+        
+        .about-image img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        
+        /* Localisation Section */
+        .localisation { 
+            background-color: var(--light); 
+            text-align: center; 
+        }
+        
+        .villes-list { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 15px; 
+            margin-top: 30px; 
+        }
+        
+        .ville-badge { 
+            background-color: var(--primary); 
+            padding: 8px 20px; 
+            border-radius: 25px; 
+            font-weight: 600; 
+            color: var(--dark); 
+        }
+        
+        /* Contact Section */
+        .contact { 
+            background-color: var(--light); 
+        }
+        
+        .contact-container { 
+            display: flex; 
+            gap: 50px; 
+        }
+        
+        .contact-info { 
+            flex: 1; 
+        }
+        
+        .contact-form { 
+            flex: 1; 
+        }
+        
+        .contact-item { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 25px; 
+        }
+        
+        .contact-icon { 
+            width: 50px; 
+            height: 50px; 
+            background-color: var(--primary-dark); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: var(--dark); 
+            font-size: 1.2rem; 
+            margin-right: 15px; 
+        }
+        
+        .language-badge {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        
+        .form-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 500; 
+        }
+        
+        .form-control { 
+            width: 100%; 
+            padding: 12px 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            font-family: inherit; 
+            font-size: 1rem; 
+            transition: var(--transition); 
+        }
+        
+        .form-control:focus { 
+            outline: none; 
+            border-color: var(--primary-dark); 
+            box-shadow: 0 0 0 3px rgba(186, 198, 151, 0.2); 
+        }
+        
+        textarea.form-control { 
+            min-height: 150px; 
+            resize: vertical; 
+        }
+        
+        /* Footer */
+        footer { 
+            background-color: var(--dark); 
+            color: var(--white); 
+            padding: 60px 0 30px; 
+        }
+        
+        .footer-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 40px; 
+        }
+        
+        .footer-column h3 { 
+            color: var(--white); 
+            margin-bottom: 20px; 
+            font-size: 1.3rem; 
+            font-family: 'DM Serif Display', serif; 
+        }
+        
+        .footer-column p { 
+            color: rgba(255, 255, 255, 0.7); 
+        }
+        
+        .footer-links { 
+            list-style: none; 
+        }
+        
+        .footer-links li { 
+            margin-bottom: 10px; 
+        }
+        
+        .footer-links a { 
+            color: rgba(255, 255, 255, 0.7); 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
+        
+        .footer-links a:hover { 
+            color: var(--primary); 
+        }
+        
+        .social-links { 
+            display: flex; 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+        
+        .social-links a { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 40px; 
+            height: 40px; 
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 50%; 
+            color: var(--white); 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
+        
+        .social-links a:hover { 
+            background-color: #ff0000; 
+            transform: translateY(-3px); 
+        }
+        
+        .copyright { 
+            text-align: center; 
+            padding-top: 30px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
+            color: rgba(255, 255, 255, 0.5); 
+            font-size: 0.9rem; 
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) { 
+            h1 { 
+                font-size: 2.5rem; 
+            } 
+            
+            h2 { 
+                font-size: 2rem; 
+            } 
+            
+            .hero-main-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.7rem;
+            }
+            
+            .about-content { 
+                flex-direction: column; 
+            } 
+            
+            .contact-container { 
+                flex-direction: column; 
+            } 
+        }
+        
+        @media (max-width: 768px) { 
+            .menu-toggle { 
+                display: block; 
+            } 
+            
+            nav ul { 
+                position: fixed; 
+                top: 80px; 
+                left: -100%; 
+                width: 100%; 
+                height: calc(100vh - 80px); 
+                background-color: var(--white); 
+                flex-direction: column; 
+                align-items: center; 
+                justify-content: flex-start; 
+                padding-top: 50px; 
+                transition: var(--transition); 
+            } 
+            
+            nav ul.active { 
+                left: 0; 
+            } 
+            
+            nav ul li { 
+                margin: 15px 0; 
+            } 
+            
+            .hero-btns { 
+                flex-direction: column; 
+                align-items: center; 
+            } 
+            
+            .hero-main-title { 
+                font-size: 2.2rem; 
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) { 
+            section { 
+                padding: 60px 0; 
+            } 
+            
+            .hero { 
+                padding: 150px 0 80px; 
+            } 
+            
+            .hero-main-title { 
+                font-size: 1.8rem; 
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .hero p { 
+                font-size: 1rem; 
+            } 
+            
+            .services-grid { 
+                grid-template-columns: 1fr; 
+            } 
+        }
     </style>
 </head>
 <body>
@@ -179,7 +701,10 @@
     <!-- Hero Section Optimisée -->
     <section class="hero" id="accueil">
         <div class="container">
-            <h1>Nettoyage Écologique de Vitres, Textiles & Véhicules | Lot & Aveyron</h1>
+            <div class="hero-title">
+                <h1 class="hero-main-title">Nettoyage Écologique de Vitres, Textiles & Véhicules</h1>
+                <h2 class="hero-subtitle">Lot & Aveyron</h2>
+            </div>
             <p><strong>Entreprise de nettoyage écologique spécialisée pour particuliers et professionnels</strong> dans le Lot (46) et l'Aveyron (12). Services professionnels de nettoyage de vitres, textiles et véhicules avec des produits 100% écologiques.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn">Devis Gratuit Nettoyage</a>
@@ -196,7 +721,7 @@
                 <!-- Service 1 - Vitres -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/blob/01326811a67c36acbfcb7d9895034624693a2b2b/vitres-cleaning-lot-aveyron.jpg?raw=true" alt="Nettoyage de vitres professionnel à Cahors, Figeac - Lot et Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vitres-cleaning-lot-aveyron.jpg" alt="Nettoyage de vitres professionnel à Cahors, Figeac - Lot et Aveyron" itemprop="image">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
@@ -205,7 +730,7 @@
                         <h3 itemprop="name">Nettoyage de Vitres Professionnel</h3>
                         <p itemprop="description">Service de <strong>nettoyage de vitres écologique</strong> pour particuliers et professionnels dans le Lot et l'Aveyron. Baies vitrées, vitrines commerciales et surfaces vitrées avec produits biodégradables.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> <strong>Nettoyage vitres Cajarc, Figeac, et alentours</strong></li>
+                            <li><i class="fas fa-check"></i> <strong>Nettoyage vitres Cahors, Figeac, Rodez</strong></li>
                             <li><i class="fas fa-check"></i> Équipements pour hauteur en sécurité</li>
                             <li><i class="fas fa-check"></i> Produits non-toxiques et biodégradables</li>
                             <li><i class="fas fa-check"></i> Résultats impeccables sans traces</li>
@@ -216,7 +741,7 @@
                 <!-- Service 2 - Textiles -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/blob/01326811a67c36acbfcb7d9895034624693a2b2b/canap-cleaning-lot-aveyron.jpg?raw=true" alt="Nettoyage de textiles écologique canapés moquettes - Lot Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/canap-cleaning-lot-aveyron.jpg" alt="Nettoyage de textiles écologique canapés moquettes - Lot Aveyron" itemprop="image">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
@@ -236,7 +761,7 @@
                 <!-- Service 3 - Véhicules -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/blob/01326811a67c36acbfcb7d9895034624693a2b2b/vehicule-cleaning-lot-aveyron.jpg?raw=true" alt="Nettoyage de véhicules écologique intérieur extérieur - Lot Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vehicules-cleaning-lot-aveyron.jpg" alt="Nettoyage de véhicules écologique intérieur extérieur - Lot Aveyron" itemprop="image">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
@@ -263,15 +788,16 @@
             <p>VERTuCLEAN intervient dans toutes les villes du Lot (46) et de l'Aveyron (12) pour vos services de nettoyage écologique de vitres, textiles et véhicules.</p>
             
             <div class="villes-list">
-                <span class="ville-badge">Cajarc (46160)</span>
-                <span class="ville-badge">Figeac (46100)</span>
-                <span class="ville-badge">Gréalou (46160)</span>
-                <span class="ville-badge">Saint Pierre Toirac (46160)</span>
                 <span class="ville-badge">Cahors (46000)</span>
+                <span class="ville-badge">Figeac (46100)</span>
+                <span class="ville-badge">Gourdon (46300)</span>
+                <span class="ville-badge">Pradines (46090)</span>
+                <span class="ville-badge">Rodez (12000)</span>
                 <span class="ville-badge">Villefranche-de-Rouergue (12200)</span>
+                <span class="ville-badge">Decazeville (12300)</span>
+                <span class="ville-badge">Onet-le-Château (12850)</span>
                 <span class="ville-badge">Saint-Céré (46400)</span>
                 <span class="ville-badge">Gramat (46500)</span>
-                <span class="ville-badge">Assier (46320)</span>
             </div>
             
             <p style="margin-top: 30px;"><strong>Service de nettoyage mobile</strong> : Nous nous déplaçons directement chez vous dans un rayon de 50km autour de Cajarc.</p>
@@ -302,12 +828,12 @@
                     <h3>Harmonie corps et conscience</h3>
                     <p>Nettoyer un espace, c'est créer un sanctuaire de paix. Cette philosophie transforme une simple prestation en expérience de bien-être durable.</p>
                     
-                    <p><em>"Un espace harmonieux favorise un esprit harmonieux. Chez VERTuCLEAN, nous ne nettoyons pas seulement : nous créons des environnements où il fait bon vivre, travailler et s'épanouir."</em></p>
+                    <p><em>"Un espace harmonieux favorise un esprit harmonieux. Chez VERTuCLEAN, nous ne nettoyons pas seulement : nous créons des environnements où il fait bon vivre, travailler et grandir."</em></p>
                     
                     <a href="#contact" class="btn">Contactez notre entreprise de nettoyage</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://github.com/MakesenSelection/vertuclean2/blob/01326811a67c36acbfcb7d9895034624693a2b2b/ethique-cleaning-lot-aveyron.jpg?raw=true" alt="Équipe de nettoyage VERTuCLEAN - Entreprise nettoyage Lot Aveyron">
+                    <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/ethique-cleaning-lot-aveyron.jpg" alt="Équipe de nettoyage VERTuCLEAN - Entreprise nettoyage Lot Aveyron">
                 </div>
             </div>
         </div>
@@ -349,6 +875,16 @@
                         <div>
                             <h4>Email</h4>
                             <p>contact@vertuclean.fr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h4>Langues</h4>
+                            <p>Français <span class="language-badge">English spoken</span></p>
                         </div>
                     </div>
                 </div>
@@ -435,6 +971,8 @@
                         <li><i class="fas fa-map-marker-alt"></i> Cajarc 46160 - Lot</li>
                         <li><i class="fas fa-phone"></i> 07 55 61 45 67</li>
                         <li><i class="fas fa-envelope"></i> contact@vertuclean.fr</li>
+                        <li><i class="fas fa-globe"></i> Français & English spoken</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 8h-12h</li>
                     </ul>
                 </div>
             </div>
