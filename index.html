@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Meta Tags SEO Essentiels -->
-    <title>VERTuCLEAN - Nettoyage Écologique Vitres, Textiles & Véhicules | Lot & Aveyron</title>
+    <title>VERTuCLEAN - Nettoyage Écologique Vitres, Textiles, Véhicules et Fins de Chantier | Lot & Aveyron</title>
     <meta name="description" content="Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron. Services professionnels et éthiques.">
     <meta name="keywords" content="nettoyage vitres, nettoyage textiles, nettoyage véhicules, entreprise nettoyage, nettoyage écologique, Lot, Aveyron, Cahors, Rodez, Figeac, Villefranche-de-Rouergue, nettoyage professionnel, nettoyage éthique">
     <meta name="author" content="VERTuCLEAN">
@@ -17,8 +17,8 @@
     <meta name="geo.position" content="44.4861;1.8425">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="VERTuCLEAN - Nettoyage Écologique Vitres, Textiles & Véhicules | Lot & Aveyron">
-    <meta property="og:description" content="Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels.">
+    <meta property="og:title" content="VERTuCLEAN - Nettoyage Écologique Vitres, Textiles, Véhicules & Fins de Chantier | Lot & Aveyron">
+    <meta property="og:description" content="Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles, véhicules et fins de chantier pour particuliers et professionnels.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.vertuclean.fr">
     <meta property="og:image" content="https://github.com/MakesenSelection/vertuclean2/raw/main/vitres-cleaning-lot-aveyron.jpg">
@@ -287,14 +287,28 @@
             font-size: 3.5rem; 
             margin-bottom: 0.5rem; 
             font-family: 'DM Serif Display', serif; 
+            text-align: center;
+            line-height: 1.1;
+            font-weight: 700;
         }
         
-        .hero-subtitle {
+        .hero-services {
+            color: var(--dark);
+            font-size: 3.5rem;
+            font-family: 'DM Serif Display', serif;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            display: block;
+            line-height: 1.1;
+        }
+        
+        .hero-location {
             color: var(--dark);
             font-size: 2rem;
             font-family: 'DM Serif Display', serif;
             font-weight: normal;
-            margin-top: 0;
+            margin-top: 1rem;
+            margin-bottom: 0;
         }
         
         .hero p { 
@@ -324,6 +338,7 @@
             overflow: hidden; 
             box-shadow: var(--shadow); 
             transition: var(--transition); 
+            position: relative;
         }
         
         .service-card:hover { 
@@ -333,6 +348,7 @@
         .service-image { 
             height: 200px; 
             overflow: hidden; 
+            position: relative;
         }
         
         .service-image img { 
@@ -376,6 +392,37 @@
             color: var(--primary-dark); 
             margin-right: 10px; 
             margin-top: 4px; 
+        }
+        
+        /* Badge "Bientôt disponible" */
+        .coming-soon-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, var(--primary-dark), var(--secondary));
+            color: var(--dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow);
+            z-index: 2;
+        }
+
+        /* Notice pour service à venir */
+        .service-notice {
+            background-color: var(--primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .service-notice p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--dark);
+            text-align: center;
         }
         
         /* About Section */
@@ -596,7 +643,11 @@
                 font-size: 2.8rem;
             }
             
-            .hero-subtitle {
+            .hero-services {
+                font-size: 2.8rem;
+            }
+            
+            .hero-location {
                 font-size: 1.7rem;
             }
             
@@ -645,7 +696,11 @@
                 font-size: 2.2rem; 
             }
             
-            .hero-subtitle {
+            .hero-services {
+                font-size: 2.2rem;
+            }
+            
+            .hero-location {
                 font-size: 1.5rem;
             }
         }
@@ -663,7 +718,11 @@
                 font-size: 1.8rem; 
             }
             
-            .hero-subtitle {
+            .hero-services {
+                font-size: 1.8rem;
+            }
+            
+            .hero-location {
                 font-size: 1.3rem;
             }
             
@@ -700,20 +759,20 @@
 
     <!-- Hero Section Optimisée -->
     <section class="hero" id="accueil">
-    <div class="container">
-        <div class="hero-title">
-            <h1 class="hero-main-title">
-                Nettoyage Écologique de Vitres<br>
-                <span class="hero-services">Textiles & Véhicules</span>
-            </h1>
-            <h2 class="hero-location">Lot & Aveyron</h2>
+        <div class="container">
+            <div class="hero-title">
+                <h1 class="hero-main-title">
+                    Micro-Entreprise de Nettoyage Éthique et Écologique de Vitres<br>
+                    <span class="hero-services">Textiles & Véhicules</span>
+                </h1>
+                <h2 class="hero-location">Lot & Aveyron</h2>
+            </div>
+            <p><strong>Entreprise de nettoyage éthique et écologique spécialisée pour particuliers et professionnels</strong> dans le Lot (46) et l'Aveyron (12). Services professionnels de nettoyage de vitres, textiles et véhicules avec des produits 100% écologiques.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Devis Gratuit Nettoyage</a>
+                <a href="#services" class="btn btn-secondary">Nos Services Écologiques</a>
+            </div>
         </div>
-        <p><strong>Entreprise de nettoyage écologique spécialisée pour particuliers et professionnels</strong> dans le Lot (46) et l'Aveyron (12). Services professionnels de nettoyage de vitres, textiles et véhicules avec des produits 100% écologiques.</p>
-        <div class="hero-btns">
-            <a href="#contact" class="btn">Devis Gratuit Nettoyage</a>
-            <a href="#services" class="btn btn-secondary">Nos Services Écologiques</a>
-        </div>
-    </div>
     </section>
 
     <!-- Services Section Optimisée -->
@@ -733,7 +792,8 @@
                         <h3 itemprop="name">Nettoyage de Vitres Professionnel</h3>
                         <p itemprop="description">Service de <strong>nettoyage de vitres écologique</strong> pour particuliers et professionnels dans le Lot et l'Aveyron. Baies vitrées, vitrines commerciales et surfaces vitrées avec produits biodégradables.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Crédit d'impôt -50% accessible pour les particuliers</li>
+                            <li><i class="fas fa-check"></i> <strong>Nettoyage vitres Cahors, Figeac, Rodez</strong></li>
+                            <li><i class="fas fa-check"></i> Équipements pour hauteur en sécurité</li>
                             <li><i class="fas fa-check"></i> Produits non-toxiques et biodégradables</li>
                             <li><i class="fas fa-check"></i> Résultats impeccables sans traces</li>
                         </ul>
@@ -752,7 +812,8 @@
                         <h3 itemprop="name">Nettoyage de Textiles Écologique</h3>
                         <p itemprop="description"><strong>Nettoyage écologique de canapés, moquettes et tapis</strong> par méthode vapeur dans le Lot et l'Aveyron. Élimination des acariens et allergènes sans produits chimiques.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Crédit d'impôt -50% accessible pour les particuliers</li>
+                            <li><i class="fas fa-check"></i> <strong>Canapés, moquettes et tapis Lot (46)</strong></li>
+                            <li><i class="fas fa-check"></i> Utilisation principale de vapeur écologique</li>
                             <li><i class="fas fa-check"></i> Élimination des acariens et allergènes</li>
                             <li><i class="fas fa-check"></i> Sans produits chimiques agressifs</li>
                         </ul>
@@ -762,7 +823,7 @@
                 <!-- Service 3 - Véhicules -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vehicule-cleaning-lot-aveyron.jpg" alt="Nettoyage de véhicules écologique intérieur extérieur - Lot Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vehicules-cleaning-lot-aveyron.jpg" alt="Nettoyage de véhicules écologique intérieur extérieur - Lot Aveyron" itemprop="image">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
@@ -771,11 +832,36 @@
                         <h3 itemprop="name">Nettoyage de Véhicules Écologique</h3>
                         <p itemprop="description">Service de <strong>nettoyage de véhicules écologique</strong> pour particuliers et professionnels dans le Lot et l'Aveyron. Intérieur et extérieur avec produits certifiés écologiques.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Véhicules particuliers et pros</li>
-                            <li><i class="fas fa-check"></i> Intérieur et/ou extérieur</li>
+                            <li><i class="fas fa-check"></i> <strong>Véhicules particuliers et pros Aveyron (12)</strong></li>
+                            <li><i class="fas fa-check"></i> Intérieur et/ou extérieur écologique</li>
                             <li><i class="fas fa-check"></i> Produits écologiques certifiés</li>
-                            
+                            <li><i class="fas fa-check"></i> Sièges, tableaux de bord, coffres</li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- Service 4 - Fin de Chantier -->
+                <div class="service-card" itemscope itemtype="https://schema.org/Service">
+                    <div class="service-image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/post-construction-lot-aveyron.jpg" alt="Nettoyage de fin de chantier post-construction - Lot Aveyron" itemprop="image">
+                        <div class="coming-soon-badge">Bientôt disponible</div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3 itemprop="name">Nettoyage de Fin de Chantier</h3>
+                        <p itemprop="description"><strong>Nettoyage post-construction pour un espace immédiatement habitable</strong>. Élimination complète des poussières et résidus de travaux après rénovation ou construction dans le Lot et l'Aveyron.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <strong>Nettoyage après rénovation et construction</strong></li>
+                            <li><i class="fas fa-check"></i> Élimination des poussières de plâtre, ciment et peinture</li>
+                            <li><i class="fas fa-check"></i> Nettoyage profond des sols, murs et surfaces</li>
+                            <li><i class="fas fa-check"></i> Préparation pour remise des clés</li>
+                            <li><i class="fas fa-check"></i> Méthodes écologiques et respectueuses</li>
+                        </ul>
+                        <div class="service-notice">
+                            <p><strong>Service en cours de lancement</strong> - Ouverture prévue très prochainement</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -789,21 +875,19 @@
             <p>VERTuCLEAN intervient dans toutes les villes du Lot (46) et de l'Aveyron (12) pour vos services de nettoyage écologique de vitres, textiles et véhicules.</p>
             
             <div class="villes-list">
-                <span class="ville-badge">Cajarc (46160)</span>
-                <span class="ville-badge">Limogne (46260)</span>
-                <span class="ville-badge">Saujac (12260)</span>
-                <span class="ville-badge">Concots (46260)</span>
-                <span class="ville-badge">St-Martin-Labouval (46330)</span>
-                <span class="ville-badge">St-Cirq-Lapopie (46330)</span>
-                <span class="ville-badge">Figeac (46100)</span>
-                <span class="ville-badge">Assier (46320)</span>
-                <span class="ville-badge">Béduer (46100)</span>
-                <span class="ville-badge">Villefranche-de-Rouergue (12200)</span>
-                <span class="ville-badge">Saint-Céré (46400)</span>
                 <span class="ville-badge">Cahors (46000)</span>
+                <span class="ville-badge">Figeac (46100)</span>
+                <span class="ville-badge">Gourdon (46300)</span>
+                <span class="ville-badge">Pradines (46090)</span>
+                <span class="ville-badge">Rodez (12000)</span>
+                <span class="ville-badge">Villefranche-de-Rouergue (12200)</span>
+                <span class="ville-badge">Decazeville (12300)</span>
+                <span class="ville-badge">Onet-le-Château (12850)</span>
+                <span class="ville-badge">Saint-Céré (46400)</span>
+                <span class="ville-badge">Gramat (46500)</span>
             </div>
             
-            <p style="margin-top: 30px;"><strong>Service de nettoyage mobile</strong> : Nous nous déplaçons directement chez vous dans un rayon de 30km autour de Cajarc.</p>
+            <p style="margin-top: 30px;"><strong>Service de nettoyage mobile</strong> : Nous nous déplaçons directement chez vous dans un rayon de 50km autour de Cajarc.</p>
         </div>
     </section>
 
@@ -813,23 +897,25 @@
             <h2>À Propos de VERTuCLEAN - Entreprise de Nettoyage Lot & Aveyron</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Entreprise de Nettoyage Éthique et Écologique dans le Lot et l'Aveyron</h3>
+                    <h3>Entreprise de Nettoyage Écologique dans le Lot et l'Aveyron</h3>
                     <p>VERTuCLEAN est votre <strong>entreprise de nettoyage écologique de confiance</strong> spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot (46) et l'Aveyron (12).</p>
                     
-                    <h3>Stop aux produits toxiques pour le vivant</h3>
-                    <p>Chez VERTuCLEAN, nous voulons autant que possible utiliser des produits non toxiques. Les produits ménagers conventionnels contiennent souvent des substances toxiques qui s'accumulent dans nos organismes et polluent nos intérieurs. Selon l'ADEME et l'ANSES, l'air intérieur peut être jusqu'à 8 fois plus pollué que l'air extérieur. Notre approche écologique protège votre santé tout en préservant la planète.</p>
+                    <h3>Nos Protecteurs et Harmoniseurs d'Espaces</h3>
+                    <p>Chez VERTuCLEAN, nous sommes bien plus qu'une entreprise de nettoyage. Nos équipes sont composées de <strong>protecteurs</strong> et d'<strong>harmoniseurs d'espaces</strong> qui transforment chaque lieu en un sanctuaire de bien-être.</p>
                     
                     <h3>Réhabiliter le métier du ménage</h3>
-                    <p>Le ménage n'est pas qu'une tâche : c'est une oeuvre qui crée l'harmonie. Un espace propre apaise l'esprit, libère la créativité et améliore le bien-être. Cette transformation profite autant à ceux qui nettoient qu'à ceux qui en bénéficient.</p>
+                    <p>Le ménage n'est pas qu'une tâche : c'est un art qui crée l'harmonie. Un espace propre apaise l'esprit, libère la créativité et améliore le bien-être. Cette transformation profite autant à ceux qui nettoient qu'à ceux qui en bénéficient.</p>
                     
                     <h3>Valorisation humaine</h3>
-                    <p>Oui, c'est un métier qui présente des côtés difficiles de par l'exigence physique que cela requiert. Nos "harmoniseurs d'espaces" sont justement rémunérés, reconnus pour leur expertise et leur contribution essentielle au bien-être collectif.</p>
+                    <p>Nos "harmoniseurs d'espaces" sont justement rémunérés, reconnus pour leur expertise et leur contribution essentielle au bien-être collectif.</p>
                     
                     <h3>Épanouissement professionnel</h3>
-                    <p>Nous investissons dans la formation et le développement personnel de notre équipe, car leur bien-être garantit la qualité de nos prestations. Nous voulons pérenniser la présence de nos employés au sein de notre entreprise.</p>
+                    <p>Nous investissons dans la formation et le développement personnel de notre équipe, car leur bien-être garantit la qualité de nos prestations.</p>
                     
+                    <h3>Harmonie corps et conscience</h3>
+                    <p>Nettoyer un espace, c'est créer un sanctuaire de paix. Cette philosophie transforme une simple prestation en expérience de bien-être durable.</p>
                     
-                    <p><em>"Un espace harmonieux favorise un esprit harmonieux. Chez VERTuCLEAN, nous ne nettoyons pas seulement : nous créons des environnements où il fait bon vivre."</em></p>
+                    <p><em>"Un espace harmonieux favorise un esprit harmonieux. Chez VERTuCLEAN, nous ne nettoyons pas seulement : nous créons des environnements où il fait bon vivre, travailler et grandir."</em></p>
                     
                     <a href="#contact" class="btn">Contactez notre entreprise de nettoyage</a>
                 </div>
@@ -919,6 +1005,7 @@
                                 <option value="windows">Nettoyage de vitres</option>
                                 <option value="textiles">Nettoyage de textiles</option>
                                 <option value="vehicles">Nettoyage de véhicules</option>
+                                <option value="construction">Nettoyage de fin de chantier</option>
                             </select>
                         </div>
                         
@@ -952,6 +1039,7 @@
                         <li><a href="#services">Nettoyage de vitres écologique</a></li>
                         <li><a href="#services">Nettoyage de textiles écologique</a></li>
                         <li><a href="#services">Nettoyage de véhicules écologique</a></li>
+                        <li><a href="#services">Nettoyage de fin de chantier</a></li>
                         <li><a href="#localisation">Zone d'intervention Lot-Aveyron</a></li>
                     </ul>
                 </div>
@@ -973,7 +1061,7 @@
                         <li><i class="fas fa-phone"></i> 07 55 61 45 67</li>
                         <li><i class="fas fa-envelope"></i> contact@vertuclean.fr</li>
                         <li><i class="fas fa-globe"></i> Français & English spoken</li>
-                        <li><i class="fas fa-clock"></i> Lundi-Samedi</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 8h-12h</li>
                     </ul>
                 </div>
             </div>
