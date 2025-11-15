@@ -275,33 +275,23 @@
             text-align: center; 
         }
         
-       .hero-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.28;
-    text-align: center;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.hero-title .accent {
-    color: #e9f5e3; 
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-        }
-        
-        .hero-services {
-            color: var(--dark);
-            font-size: 3.5rem;
-            font-family: 'DM Serif Display', serif;
+        .hero-title {
+            font-size: 2.8rem;
             font-weight: 700;
-            margin-top: 0.5rem;
-            display: block;
-            line-height: 1.1;
+            line-height: 1.3;
+            text-align: center;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
         .hero-location {
             color: var(--dark);
             font-size: 2rem;
@@ -316,12 +306,14 @@
             font-size: 1.2rem; 
             max-width: 700px; 
             margin: 0 auto 2.5rem; 
+            line-height: 1.7;
         }
         
         .hero-btns { 
             display: flex; 
             justify-content: center; 
             gap: 20px; 
+            margin-top: 2rem;
         }
         
         /* Services Section */
@@ -392,6 +384,23 @@
             color: var(--primary-dark); 
             margin-right: 10px; 
             margin-top: 4px; 
+        }
+
+        /* Lien pour véhicules */
+        .service-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid var(--primary-dark);
+            padding-bottom: 2px;
+            transition: var(--transition);
+        }
+
+        .service-link:hover {
+            color: var(--dark);
+            border-color: var(--dark);
         }
         
         /* Badge "Bientôt disponible" */
@@ -639,12 +648,12 @@
                 font-size: 2rem; 
             } 
             
-            .hero-main-title {
-                font-size: 2.8rem;
+            .hero-title {
+                font-size: 2.5rem;
             }
             
-            .hero-services {
-                font-size: 2.8rem;
+            .hero-subtitle {
+                font-size: 1.3rem;
             }
             
             .hero-location {
@@ -692,12 +701,12 @@
                 align-items: center; 
             } 
             
-            .hero-main-title { 
-                font-size: 2.2rem; 
+            .hero-title { 
+                font-size: 2rem; 
             }
             
-            .hero-services {
-                font-size: 2.2rem;
+            .hero-subtitle {
+                font-size: 1.2rem;
             }
             
             .hero-location {
@@ -714,12 +723,12 @@
                 padding: 150px 0 80px; 
             } 
             
-            .hero-main-title { 
+            .hero-title { 
                 font-size: 1.8rem; 
             }
             
-            .hero-services {
-                font-size: 1.8rem;
+            .hero-subtitle {
+                font-size: 1.1rem;
             }
             
             .hero-location {
@@ -760,16 +769,23 @@
     <!-- Hero Section Optimisée -->
     <section class="hero" id="accueil">
         <div class="container">
-            <div class="hero-title">
-                <h1 class="hero-title">
-  Micro-Entreprise de Nettoyage<br>
-  <span class="accent">Éthique & Écologique</span><br>
-  de Vitres, Textiles, Véhicules<br>
-  & Fins de Chantier
-</h1>
-         <h2 class="hero-location">Lot & Aveyron</h2>
+            <h1 class="hero-title">
+                Nouvelle Micro-Entreprise de Nettoyage<br>
+                Éthique & Écologique<br>
+                de Vitres, Textiles, Véhicules<br>
+                & Fins de Chantier
+            </h1>
+            
+            <div class="hero-subtitle">
+                <p><strong>Basée sur Cajarc (46)</strong></p>
+                <p>Entreprise de nettoyage éthique et écologique spécialisée<br> 
+                pour particuliers et professionnels dans le Lot (46) et l'Aveyron (12).</p>
+                <p>Services de nettoyage de vitres, textiles, véhicules et fins de chantiers<br>
+                avec des produits écologiques.</p>
             </div>
-            <p><strong>Entreprise de nettoyage éthique et écologique spécialisée pour particuliers et professionnels</strong> dans le Lot (46) et l'Aveyron (12). Services professionnels de nettoyage de vitres, textiles et véhicules avec des produits 100% écologiques.</p>
+            
+            <h2 class="hero-location">Lot & Aveyron</h2>
+            
             <div class="hero-btns">
                 <a href="#contact" class="btn">Devis Gratuit Nettoyage</a>
                 <a href="#services" class="btn btn-secondary">Nos Services Écologiques</a>
@@ -839,6 +855,7 @@
                             <li><i class="fas fa-check"></i> Produits écologiques certifiés</li>
                             <li><i class="fas fa-check"></i> Sièges, tableaux de bord, coffres</li>
                         </ul>
+                        <a href="nettoyage-vehicules.html" class="service-link">Voir nos offres Basic & Premium →</a>
                     </div>
                 </div>
 
@@ -1040,7 +1057,7 @@
                     <ul class="footer-links">
                         <li><a href="#services">Nettoyage de vitres écologique</a></li>
                         <li><a href="#services">Nettoyage de textiles écologique</a></li>
-                        <li><a href="#services">Nettoyage de véhicules écologique</a></li>
+                        <li><a href="nettoyage-vehicules.html">Nettoyage de véhicules écologique</a></li>
                         <li><a href="#services">Nettoyage de fin de chantier</a></li>
                         <li><a href="#localisation">Zone d'intervention Lot-Aveyron</a></li>
                     </ul>
