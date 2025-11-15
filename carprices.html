@@ -1,1 +1,930 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs Nettoyage Véhicules - VERTuCLEAN | Lot & Aveyron</title>
+    <meta name="description" content="Découvrez nos formules de nettoyage écologique pour véhicules : Basic, Premium et offre spéciale utilitaires artisans. Devis gratuit dans le Lot et l'Aveyron.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --primary: #d0e1c1; 
+            --primary-dark: #bac697; 
+            --secondary: #d7d7ae; 
+            --light: #f8f9fa; 
+            --dark: #4a5a3a; 
+            --text: #333333; 
+            --text-light: #6c757d; 
+            --white: #ffffff; 
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+            --transition: all 0.3s ease; 
+        }
+        
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text); 
+            background-color: var(--white); 
+        }
+        
+        .container { 
+            width: 100%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        
+        section { 
+            padding: 80px 0; 
+        }
+        
+        h1, h2, h3, h4 { 
+            margin-bottom: 1rem; 
+            line-height: 1.2; 
+            color: var(--dark); 
+        }
+        
+        h1 { 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            text-align: center;
+        }
+        
+        h2 { 
+            font-size: 2rem; 
+            text-align: center; 
+            margin-bottom: 3rem; 
+            position: relative; 
+        }
+        
+        h2:after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 80px; 
+            height: 4px; 
+            background-color: var(--primary-dark); 
+        }
+        
+        p { 
+            margin-bottom: 1.5rem; 
+            color: var(--text-light); 
+        }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 12px 30px; 
+            background-color: var(--primary-dark); 
+            color: var(--dark); 
+            border: none; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            cursor: pointer; 
+            transition: var(--transition); 
+            box-shadow: var(--shadow); 
+        }
+        
+        .btn:hover { 
+            background-color: var(--primary); 
+            transform: translateY(-3px); 
+        }
+        
+        .btn-secondary { 
+            background-color: var(--secondary); 
+            color: var(--dark); 
+        }
+        
+        .btn-secondary:hover { 
+            background-color: #d0d09e; 
+        }
+        
+        /* Header */
+        header { 
+            background-color: var(--white); 
+            box-shadow: var(--shadow); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        
+        .header-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 20px 0; 
+        }
+        
+        .logo { 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            color: var(--dark); 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center; 
+            font-family: 'DM Serif Display', serif; 
+            letter-spacing: 0.5px; 
+            position: relative; 
+            padding: 5px 15px; 
+        }
+        
+        .logo i { 
+            margin-right: 10px; 
+            font-size: 2rem; 
+            color: var(--primary-dark); 
+        }
+        
+        nav ul { 
+            display: flex; 
+            list-style: none; 
+        }
+        
+        nav ul li { 
+            margin-left: 30px; 
+        }
+        
+        nav ul li a { 
+            text-decoration: none; 
+            color: var(--dark); 
+            font-weight: 500; 
+            transition: var(--transition); 
+        }
+        
+        nav ul li a:hover { 
+            color: var(--primary-dark); 
+        }
+        
+        .menu-toggle { 
+            display: none; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+            color: var(--dark); 
+        }
+        
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(135deg, rgba(208, 225, 193, 0.2), rgba(186, 198, 151, 0.2)), url('https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+            color: var(--dark); 
+            padding: 180px 0 120px; 
+            text-align: center; 
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+            text-align: center;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        
+        .hero-btns { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-top: 2rem;
+        }
+        
+        /* Tarifs Section */
+        .tarifs-intro {
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .formules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .formule-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .formule-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .formule-header {
+            padding: 25px;
+            text-align: center;
+            background-color: var(--primary);
+        }
+        
+        .formule-premium .formule-header {
+            background-color: var(--primary-dark);
+        }
+        
+        .formule-luxe .formule-header {
+            background: linear-gradient(45deg, var(--primary-dark), var(--secondary));
+        }
+        
+        .formule-icon {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .formule-content {
+            padding: 25px;
+        }
+        
+        .formule-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .formule-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .formule-features li i {
+            color: var(--primary-dark);
+            margin-right: 10px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        
+        .formule-price {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        
+        .price-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        /* Tableaux de tarifs */
+        .tarifs-section {
+            margin-bottom: 80px;
+        }
+        
+        .tarifs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .tarifs-table th {
+            background-color: var(--primary-dark);
+            color: var(--dark);
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .tarifs-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tarifs-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .tarifs-table tr:hover {
+            background-color: var(--primary);
+        }
+        
+        .vehicle-type {
+            font-weight: 600;
+            text-align: left;
+        }
+        
+        /* Section Utilitaires */
+        .utilitaires {
+            background-color: var(--primary);
+            border-radius: 10px;
+            padding: 40px;
+            margin-top: 60px;
+        }
+        
+        .utilitaires-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .utilitaires-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .utilitaires-text {
+            flex: 1;
+        }
+        
+        .utilitaires-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .utilitaires-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Section Déplacement */
+        .deplacement {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 40px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .deplacement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .deplacement-card {
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .deplacement-distance {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .deplacement-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        
+        /* Footer */
+        footer { 
+            background-color: var(--dark); 
+            color: var(--white); 
+            padding: 60px 0 30px; 
+        }
+        
+        .footer-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 40px; 
+        }
+        
+        .footer-column h3 { 
+            color: var(--white); 
+            margin-bottom: 20px; 
+            font-size: 1.3rem; 
+            font-family: 'DM Serif Display', serif; 
+        }
+        
+        .footer-column p { 
+            color: rgba(255, 255, 255, 0.7); 
+        }
+        
+        .footer-links { 
+            list-style: none; 
+        }
+        
+        .footer-links li { 
+            margin-bottom: 10px; 
+        }
+        
+        .footer-links a { 
+            color: rgba(255, 255, 255, 0.7); 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
+        
+        .footer-links a:hover { 
+            color: var(--primary); 
+        }
+        
+        .social-links { 
+            display: flex; 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+        
+        .social-links a { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 40px; 
+            height: 40px; 
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 50%; 
+            color: var(--white); 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
+        
+        .social-links a:hover { 
+            background-color: #ff0000; 
+            transform: translateY(-3px); 
+        }
+        
+        .copyright { 
+            text-align: center; 
+            padding-top: 30px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
+            color: rgba(255, 255, 255, 0.5); 
+            font-size: 0.9rem; 
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) { 
+            h1 { 
+                font-size: 2.2rem; 
+            } 
+            
+            h2 { 
+                font-size: 1.8rem; 
+            } 
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .utilitaires-content { 
+                flex-direction: column; 
+            } 
+        }
+        
+        @media (max-width: 768px) { 
+            .menu-toggle { 
+                display: block; 
+            } 
+            
+            nav ul { 
+                position: fixed; 
+                top: 80px; 
+                left: -100%; 
+                width: 100%; 
+                height: calc(100vh - 80px); 
+                background-color: var(--white); 
+                flex-direction: column; 
+                align-items: center; 
+                justify-content: flex-start; 
+                padding-top: 50px; 
+                transition: var(--transition); 
+            } 
+            
+            nav ul.active { 
+                left: 0; 
+            } 
+            
+            nav ul li { 
+                margin: 15px 0; 
+            } 
+            
+            .hero-btns { 
+                flex-direction: column; 
+                align-items: center; 
+            } 
+            
+            .hero-title { 
+                font-size: 1.8rem; 
+            }
+            
+            .tarifs-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        
+        @media (max-width: 576px) { 
+            section { 
+                padding: 60px 0; 
+            } 
+            
+            .hero { 
+                padding: 150px 0 80px; 
+            } 
+            
+            .hero-title { 
+                font-size: 1.6rem; 
+            }
+            
+            .formules-grid { 
+                grid-template-columns: 1fr; 
+            } 
+            
+            .utilitaires, .deplacement {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i>
+                VERTuCLEAN
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#localisation">Zone d'intervention</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h1 class="hero-title">
+                Nettoyage Écologique de Véhicules
+            </h1>
+            
+            <div class="hero-subtitle">
+                <p><strong>Formules Basic, Premium et offre spéciale artisans</strong></p>
+                <p>Découvrez nos prestations de nettoyage écologique pour tous types de véhicules<br> 
+                dans le Lot (46) et l'Aveyron (12).</p>
+            </div>
+            
+            <div class="hero-btns">
+                <a href="index.html#contact" class="btn">Demander un devis gratuit</a>
+                <a href="index.html#services" class="btn btn-secondary">Voir tous nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formules de Nettoyage -->
+    <section class="tarifs">
+        <div class="container">
+            <h2>Nos Formules de Nettoyage</h2>
+            
+            <div class="tarifs-intro">
+                <p>Choisissez la formule qui correspond à vos besoins. Tous nos nettoyages utilisent des produits 100% écologiques et respectueux de l'environnement.</p>
+            </div>
+            
+            <div class="formules-grid">
+                <!-- Formule Basic -->
+                <div class="formule-card">
+                    <div class="formule-header">
+                        <div class="formule-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Formule Basic</h3>
+                        <p>Nettoyage intérieur complet</p>
+                    </div>
+                    <div class="formule-content">
+                        <ul class="formule-features">
+                            <li><i class="fas fa-check"></i> Aspiration complète de l'habitacle</li>
+                            <li><i class="fas fa-check"></i> Dépoussiérage du tableau de bord et plastiques</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des portières et accoudoirs</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des vitres intérieures</li>
+                            <li><i class="fas fa-check"></i> Désodorisation de l'habitacle</li>
+                            <li><i class="fas fa-check"></i> Application d'un brillant plastique</li>
+                        </ul>
+                        <div class="formule-price">À partir de 60€</div>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;">Choisir cette formule</a>
+                    </div>
+                </div>
+                
+                <!-- Formule Premium -->
+                <div class="formule-card formule-premium">
+                    <div class="formule-header">
+                        <div class="formule-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Formule Premium</h3>
+                        <p>Nettoyage intérieur approfondi</p>
+                    </div>
+                    <div class="formule-content">
+                        <ul class="formule-features">
+                            <li><i class="fas fa-check"></i> Tout inclus dans la formule Basic</li>
+                            <li><i class="fas fa-check"></i> Nettoyage vapeur des textiles</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des grilles d'aération</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des vitres intérieures et extérieures</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des sièges en cuir et alcantara</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des contours de portes et coffre</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des rails de sièges</li>
+                            <li><i class="fas fa-check"></i> Dressing des plastiques intérieurs</li>
+                        </ul>
+                        <div class="formule-price">À partir de 90€</div>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;">Choisir cette formule</a>
+                    </div>
+                </div>
+                
+                <!-- Formule Luxe -->
+                <div class="formule-card formule-luxe">
+                    <div class="formule-header">
+                        <div class="formule-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Formule Luxe</h3>
+                        <p>Nettoyage intérieur et extérieur premium</p>
+                    </div>
+                    <div class="formule-content">
+                        <ul class="formule-features">
+                            <li><i class="fas fa-check"></i> Tout inclus dans la formule Premium</li>
+                            <li><i class="fas fa-check"></i> Lavage minutieux de la carrosserie à la main</li>
+                            <li><i class="fas fa-check"></i> Nettoyage des jantes et pneus</li>
+                            <li><i class="fas fa-check"></i> Rinçage et séchage à la microfibre</li>
+                            <li><i class="fas fa-check"></i> Application d'un revivifiant de brillance</li>
+                            <li><i class="fas fa-check"></i> Nettoyage du garde-boue</li>
+                            <li><i class="fas fa-check"></i> Gel de protection pour plastiques extérieurs</li>
+                            <li><i class="fas fa-check"></i> Dressing des pneus</li>
+                            <li><i class="fas fa-check"></i> Application d'un lustrant carrosserie</li>
+                        </ul>
+                        <div class="formule-price">À partir de 120€</div>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;">Choisir cette formule</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tableau des tarifs intérieur -->
+            <div class="tarifs-section">
+                <h2>Tarifs Nettoyage Intérieur</h2>
+                <table class="tarifs-table">
+                    <thead>
+                        <tr>
+                            <th>Type de véhicule</th>
+                            <th>Formule Basic</th>
+                            <th>Formule Premium</th>
+                            <th>Formule Luxe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vehicle-type">Citadine (Peugeot 208, Renault Clio...)</td>
+                            <td>60€</td>
+                            <td>90€</td>
+                            <td>120€</td>
+                        </tr>
+                        <tr>
+                            <td class="vehicle-type">Compacte (VW Golf, Renault Mégane...)</td>
+                            <td>70€</td>
+                            <td>100€</td>
+                            <td>130€</td>
+                        </tr>
+                        <tr>
+                            <td class="vehicle-type">Berline (Peugeot 508, BMW Série 3...)</td>
+                            <td>80€</td>
+                            <td>110€</td>
+                            <td>140€</td>
+                        </tr>
+                        <tr>
+                            <td class="vehicle-type">SUV (Peugeot 3008, Renault Kadjar...)</td>
+                            <td>90€</td>
+                            <td>120€</td>
+                            <td>150€</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="price-note">* Prix indicatifs - Devis personnalisé selon l'état de votre véhicule</p>
+            </div>
+            
+            <!-- Tableau des tarifs intérieur + extérieur -->
+            <div class="tarifs-section">
+                <h2>Tarifs Nettoyage Intérieur + Extérieur</h2>
+                <table class="tarifs-table">
+                    <thead>
+                        <tr>
+                            <th>Type de véhicule</th>
+                            <th>Formule Basic</th>
+                            <th>Formule Premium</th>
+                            <th>Formule Luxe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vehicle-type">Citadine (Peugeot 208, Renault Clio...)</td>
+                            <td>90€</td>
+                            <td>130€</td>
+                            <td>170€</td>
+                        </tr>
+                        <tr>
+                            <td class="vehicle-type">Compacte (VW Golf, Renault Mégane...)</td>
+                            <td>100€</td>
+                            <td>140€</td>
+                            <td>180€</td>
+                        </tr>
+                        <tr>
+                            <td class="vehicle-type">Berline (Peugeot 508, BMW Série 3...)</td>
+                            <td>110€</td>
+                            <td>150€</td>
+                            <td>190€</td>
+                        </tr>
+                        <tr>
+                            <td class="vehicle-type">SUV (Peugeot 3008, Renault Kadjar...)</td>
+                            <td>120€</td>
+                            <td>160€</td>
+                            <td>200€</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="price-note">* Prix indicatifs - Devis personnalisé selon l'état de votre véhicule</p>
+            </div>
+            
+            <!-- Section Utilitaires Artisans -->
+            <div class="utilitaires">
+                <div class="utilitaires-header">
+                    <h2>Offre Spéciale Utilitaires Artisans</h2>
+                    <p>Des tarifs adaptés pour les professionnels</p>
+                </div>
+                <div class="utilitaires-content">
+                    <div class="utilitaires-text">
+                        <p>Nous comprenons l'importance d'un véhicule utilitaire propre et bien entretenu pour votre image professionnelle. C'est pourquoi nous proposons des tarifs spécifiques pour les artisans et professionnels.</p>
+                        
+                        <h3>Nos prestations pour utilitaires :</h3>
+                        <ul class="formule-features">
+                            <li><i class="fas fa-check"></i> <strong>Nettoyage complet de l'habitacle</strong> - Sièges, tableau de bord, sol</li>
+                            <li><i class="fas fa-check"></i> <strong>Nettoyage de la zone de chargement</strong> - Benne, plateau, aménagements</li>
+                            <li><i class="fas fa-check"></i> <strong>Dépoussiérage des outils et équipements</strong></li>
+                            <li><i class="fas fa-check"></i> <strong>Nettoyage extérieur complet</strong> - Carrosserie, vitres, jantes</li>
+                            <li><i class="fas fa-check"></i> <strong>Désodorisation professionnelle</strong></li>
+                        </ul>
+                        
+                        <h3>Tarifs utilitaires (sur devis) :</h3>
+                        <ul class="formule-features">
+                            <li><i class="fas fa-euro-sign"></i> <strong>Petit utilitaire</strong> (type Renault Kangoo) : à partir de 80€</li>
+                            <li><i class="fas fa-euro-sign"></i> <strong>Utilitaire moyen</strong> (type Renault Trafic) : à partir de 100€</li>
+                            <li><i class="fas fa-euro-sign"></i> <strong>Grand utilitaire</strong> (type Renault Master) : à partir de 130€</li>
+                            <li><i class="fas fa-euro-sign"></i> <strong>Camionnette avec aménagement</strong> : sur devis personnalisé</li>
+                        </ul>
+                        
+                        <p><em>Forfaits mensuels ou trimestriels disponibles pour les professionnels - Contactez-nous pour un devis personnalisé !</em></p>
+                        
+                        <a href="index.html#contact" class="btn">Devis professionnel gratuit</a>
+                    </div>
+                    <div class="utilitaires-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nettoyage de véhicule utilitaire VERTuCLEAN">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section Déplacement -->
+            <div class="deplacement">
+                <h2>Frais de Déplacement</h2>
+                <p>Nous nous déplaçons directement chez vous dans le Lot et l'Aveyron</p>
+                
+                <div class="deplacement-grid">
+                    <div class="deplacement-card">
+                        <div class="deplacement-distance">Jusqu'à 30km</div>
+                        <div class="deplacement-price">GRATUIT</div>
+                        <p>Autour de Cajarc</p>
+                    </div>
+                    
+                    <div class="deplacement-card">
+                        <div class="deplacement-distance">De 30km à 50km</div>
+                        <div class="deplacement-price">+20€</div>
+                        <p>Cahors, Figeac, Villefranche-de-Rouergue</p>
+                    </div>
+                    
+                    <div class="deplacement-card">
+                        <div class="deplacement-distance">De 50km à 70km</div>
+                        <div class="deplacement-price">+30€</div>
+                        <p>Rodez, Gourdon, Decazeville</p>
+                    </div>
+                    
+                    <div class="deplacement-card">
+                        <div class="deplacement-distance">De 70km à 90km</div>
+                        <div class="deplacement-price">+40€</div>
+                        <p>Zone étendue Lot & Aveyron</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 30px;"><em>Départ de Cajarc (46160) - Forfait déplacement ajouté au prix de la prestation</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>VERTuCLEAN - Nettoyage Écologique</h3>
+                    <p>Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron.</p>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@VERTuCLEAN" target="_blank" aria-label="Chaîne YouTube VERTuCLEAN"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services de Nettoyage</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Nettoyage de vitres écologique</a></li>
+                        <li><a href="index.html#services">Nettoyage de textiles écologique</a></li>
+                        <li><a href="carprices.html">Nettoyage de véhicules écologique</a></li>
+                        <li><a href="index.html#services">Nettoyage de fin de chantier</a></li>
+                        <li><a href="index.html#localisation">Zone d'intervention Lot-Aveyron</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Entreprise de Nettoyage</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#apropos">À propos de VERTuCLEAN</a></li>
+                        <li><a href="index.html#contact">Devis gratuit nettoyage</a></li>
+                        <li><a href="index.html#contact">Contact entreprise nettoyage</a></li>
+                        <li><a href="index.html#localisation">Villes desservies Lot (46)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Nettoyage</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Cajarc 46160 - Lot</li>
+                        <li><i class="fas fa-phone"></i> 07 55 61 45 67</li>
+                        <li><i class="fas fa-envelope"></i> contact@vertuclean.fr</li>
+                        <li><i class="fas fa-globe"></i> Français & English spoken</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h | Sam: 8h-12h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 VERTuCLEAN - Entreprise de nettoyage écologique spécialisée vitres, textiles et véhicules dans le Lot et l'Aveyron. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Fermer le menu en cliquant sur un lien
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Animation au défilement
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>
