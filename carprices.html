@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarifs Nettoyage Véhicules - VERTuCLEAN | Lot & Aveyron</title>
-    <meta name="description" content="Découvrez nos formules de nettoyage écologique pour véhicules : Basic, Premium et offre spéciale utilitaires artisans. Devis gratuit dans le Lot et l'Aveyron.">
+    <title>Vehicle Cleaning Prices - VERTuCLEAN | Lot & Aveyron</title>
+    <meta name="description" content="Discover our ecological vehicle cleaning formulas: Basic, Premium and special offer for artisans. Free quote in Lot and Aveyron.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -149,6 +149,7 @@
         nav ul { 
             display: flex; 
             list-style: none; 
+            align-items: center;
         }
         
         nav ul li { 
@@ -164,6 +165,32 @@
         
         nav ul li a:hover { 
             color: var(--primary-dark); 
+        }
+        
+        .language-switcher {
+            display: flex;
+            margin-left: 20px;
+            border: 1px solid var(--primary-dark);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .language-option {
+            padding: 5px 12px;
+            background: var(--white);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .language-option.active {
+            background: var(--primary-dark);
+            color: var(--dark);
+        }
+        
+        .language-option:not(.active):hover {
+            background: var(--primary);
         }
         
         .menu-toggle { 
@@ -500,6 +527,13 @@
             font-size: 0.9rem; 
         }
         
+        /* Content languages */
+        .lang-fr { display: block; }
+        .lang-en { display: none; }
+        
+        body.english-version .lang-fr { display: none; }
+        body.english-version .lang-en { display: block; }
+        
         /* Responsive */
         @media (max-width: 992px) { 
             h1 { 
@@ -571,6 +605,10 @@
                 display: block;
                 overflow-x: auto;
             }
+            
+            .language-switcher {
+                margin-top: 10px;
+            }
         }
         
         @media (max-width: 576px) { 
@@ -612,10 +650,16 @@
             </div>
             <nav>
                 <ul id="navMenu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#localisation">Zone d'intervention</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html" class="lang-fr">Accueil</a><a href="index.html" class="lang-en">Home</a></li>
+                    <li><a href="index.html#services" class="lang-fr">Services</a><a href="index.html#services" class="lang-en">Services</a></li>
+                    <li><a href="index.html#localisation" class="lang-fr">Zone d'intervention</a><a href="index.html#localisation" class="lang-en">Service Area</a></li>
+                    <li><a href="index.html#contact" class="lang-fr">Contact</a><a href="index.html#contact" class="lang-en">Contact</a></li>
+                    <li>
+                        <div class="language-switcher">
+                            <a href="#" class="language-option active" data-lang="fr">FR</a>
+                            <a href="#" class="language-option" data-lang="en">EN</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -624,22 +668,41 @@
     <!-- Hero Section -->
     <section class="hero" id="accueil">
         <div class="container">
-            <h1 class="hero-title">
-                Nettoyage Écologique de Véhicules
-            </h1>
-            
-            <div class="hero-subtitle">
-                Formules Basic, Premium et offre spéciale artisans
+            <div class="lang-fr">
+                <h1 class="hero-title">
+                    Nettoyage Écologique de Véhicules
+                </h1>
+                
+                <div class="hero-subtitle">
+                    Formules Basic, Premium et offre spéciale artisans
+                </div>
+                
+                <div class="hero-text">
+                    <p>Découvrez nos prestations de nettoyage écologique pour tous types de véhicules dans le Lot (46) et l'Aveyron (12).</p>
+                    <p>Des produits 100% écologiques pour un résultat impeccable et respectueux de l'environnement.</p>
+                </div>
             </div>
             
-            <div class="hero-text">
-                <p>Découvrez nos prestations de nettoyage écologique pour tous types de véhicules dans le Lot (46) et l'Aveyron (12).</p>
-                <p>Des produits 100% écologiques pour un résultat impeccable et respectueux de l'environnement.</p>
+            <div class="lang-en">
+                <h1 class="hero-title">
+                    Ecological Vehicle Cleaning
+                </h1>
+                
+                <div class="hero-subtitle">
+                    Basic, Premium formulas and special offer for artisans
+                </div>
+                
+                <div class="hero-text">
+                    <p>Discover our ecological cleaning services for all types of vehicles in Lot (46) and Aveyron (12).</p>
+                    <p>100% ecological products for impeccable and environmentally friendly results.</p>
+                </div>
             </div>
             
             <div class="hero-btns">
-                <a href="index.html#contact" class="btn">Demander un devis gratuit</a>
-                <a href="index.html#services" class="btn btn-secondary">Voir tous nos services</a>
+                <a href="index.html#contact" class="btn lang-fr">Demander un devis gratuit</a>
+                <a href="index.html#contact" class="btn lang-en">Request a free quote</a>
+                <a href="index.html#services" class="btn btn-secondary lang-fr">Voir tous nos services</a>
+                <a href="index.html#services" class="btn btn-secondary lang-en">See all our services</a>
             </div>
         </div>
     </section>
@@ -647,10 +710,12 @@
     <!-- Formules de Nettoyage -->
     <section class="tarifs">
         <div class="container">
-            <h2>Nos Formules de Nettoyage</h2>
+            <h2 class="lang-fr">Nos Formules de Nettoyage</h2>
+            <h2 class="lang-en">Our Cleaning Formulas</h2>
             
             <div class="tarifs-intro">
-                <p>Choisissez la formule qui correspond à vos besoins. Tous nos nettoyages utilisent des produits 100% écologiques et respectueux de l'environnement.</p>
+                <p class="lang-fr">Choisissez la formule qui correspond à vos besoins. Tous nos nettoyages utilisent des produits 100% écologiques et respectueux de l'environnement.</p>
+                <p class="lang-en">Choose the formula that meets your needs. All our cleanings use 100% ecological and environmentally friendly products.</p>
             </div>
             
             <div class="formules-grid">
@@ -660,20 +725,30 @@
                         <div class="formule-icon">
                             <i class="fas fa-car"></i>
                         </div>
-                        <h3>Formule Basic</h3>
-                        <p>Nettoyage intérieur complet</p>
+                        <h3 class="lang-fr">Formule Basic</h3>
+                        <h3 class="lang-en">Basic Formula</h3>
+                        <p class="lang-fr">Nettoyage intérieur complet</p>
+                        <p class="lang-en">Complete interior cleaning</p>
                     </div>
                     <div class="formule-content">
                         <ul class="formule-features">
-                            <li><i class="fas fa-check"></i> Aspiration complète de l'habitacle</li>
-                            <li><i class="fas fa-check"></i> Dépoussiérage du tableau de bord et plastiques</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des portières et accoudoirs</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des vitres intérieures</li>
-                            <li><i class="fas fa-check"></i> Désodorisation de l'habitacle</li>
-                            <li><i class="fas fa-check"></i> Application d'un brillant plastique</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Aspiration complète de l'habitacle</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Complete interior vacuuming</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Dépoussiérage du tableau de bord et plastiques</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Dashboard and plastic dusting</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des portières et accoudoirs</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Door panels and armrests cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des vitres intérieures</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Interior window cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Désodorisation de l'habitacle</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Interior deodorization</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Application d'un brillant plastique</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Plastic shine application</li>
                         </ul>
-                        <div class="formule-price">À partir de 60€</div>
-                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;">Choisir cette formule</a>
+                        <div class="formule-price lang-fr">À partir de 60€</div>
+                        <div class="formule-price lang-en">From 60€</div>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;" class="lang-fr">Choisir cette formule</a>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;" class="lang-en">Choose this formula</a>
                     </div>
                 </div>
                 
@@ -683,22 +758,34 @@
                         <div class="formule-icon">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h3>Formule Premium</h3>
-                        <p>Nettoyage intérieur approfondi</p>
+                        <h3 class="lang-fr">Formule Premium</h3>
+                        <h3 class="lang-en">Premium Formula</h3>
+                        <p class="lang-fr">Nettoyage intérieur approfondi</p>
+                        <p class="lang-en">Deep interior cleaning</p>
                     </div>
                     <div class="formule-content">
                         <ul class="formule-features">
-                            <li><i class="fas fa-check"></i> Tout inclus dans la formule Basic</li>
-                            <li><i class="fas fa-check"></i> Nettoyage vapeur des textiles</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des grilles d'aération</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des vitres intérieures et extérieures</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des sièges en cuir et alcantara</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des contours de portes et coffre</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des rails de sièges</li>
-                            <li><i class="fas fa-check"></i> Dressing des plastiques intérieurs</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Tout inclus dans la formule Basic</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Everything included in Basic formula</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage vapeur des textiles</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Steam cleaning of textiles</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des grilles d'aération</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Air vent cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des vitres intérieures et extérieures</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Interior and exterior window cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des sièges en cuir et alcantara</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Leather and alcantara seat cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des contours de portes et coffre</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Door and trunk edges cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des rails de sièges</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Seat rail cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Dressing des plastiques intérieurs</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Interior plastic dressing</li>
                         </ul>
-                        <div class="formule-price">À partir de 90€</div>
-                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;">Choisir cette formule</a>
+                        <div class="formule-price lang-fr">À partir de 90€</div>
+                        <div class="formule-price lang-en">From 90€</div>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;" class="lang-fr">Choisir cette formule</a>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;" class="lang-en">Choose this formula</a>
                     </div>
                 </div>
                 
@@ -708,141 +795,190 @@
                         <div class="formule-icon">
                             <i class="fas fa-crown"></i>
                         </div>
-                        <h3>Formule Luxe</h3>
-                        <p>Nettoyage intérieur et extérieur premium</p>
+                        <h3 class="lang-fr">Formule Luxe</h3>
+                        <h3 class="lang-en">Luxury Formula</h3>
+                        <p class="lang-fr">Nettoyage intérieur et extérieur premium</p>
+                        <p class="lang-en">Premium interior and exterior cleaning</p>
                     </div>
                     <div class="formule-content">
                         <ul class="formule-features">
-                            <li><i class="fas fa-check"></i> Tout inclus dans la formule Premium</li>
-                            <li><i class="fas fa-check"></i> Lavage minutieux de la carrosserie à la main</li>
-                            <li><i class="fas fa-check"></i> Nettoyage des jantes et pneus</li>
-                            <li><i class="fas fa-check"></i> Rinçage et séchage à la microfibre</li>
-                            <li><i class="fas fa-check"></i> Application d'un revivifiant de brillance</li>
-                            <li><i class="fas fa-check"></i> Nettoyage du garde-boue</li>
-                            <li><i class="fas fa-check"></i> Gel de protection pour plastiques extérieurs</li>
-                            <li><i class="fas fa-check"></i> Dressing des pneus</li>
-                            <li><i class="fas fa-check"></i> Application d'un lustrant carrosserie</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Tout inclus dans la formule Premium</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Everything included in Premium formula</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Lavage minutieux de la carrosserie à la main</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Detailed hand wash of the bodywork</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage des jantes et pneus</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Wheel and tire cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Rinçage et séchage à la microfibre</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Rinsing and drying with microfiber</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Application d'un revivifiant de brillance</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Shine reviver application</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Nettoyage du garde-boue</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Mudguard cleaning</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Gel de protection pour plastiques extérieurs</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Protective gel for exterior plastics</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Dressing des pneus</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Tire dressing</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> Application d'un lustrant carrosserie</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> Bodywork polish application</li>
                         </ul>
-                        <div class="formule-price">À partir de 120€</div>
-                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;">Choisir cette formule</a>
+                        <div class="formule-price lang-fr">À partir de 120€</div>
+                        <div class="formule-price lang-en">From 120€</div>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;" class="lang-fr">Choisir cette formule</a>
+                        <a href="index.html#contact" class="btn" style="width: 100%; text-align: center;" class="lang-en">Choose this formula</a>
                     </div>
                 </div>
             </div>
             
             <!-- Tableau des tarifs intérieur -->
             <div class="tarifs-section">
-                <h2>Tarifs Nettoyage Intérieur</h2>
+                <h2 class="lang-fr">Tarifs Nettoyage Intérieur</h2>
+                <h2 class="lang-en">Interior Cleaning Prices</h2>
                 <table class="tarifs-table">
                     <thead>
                         <tr>
-                            <th>Type de véhicule</th>
-                            <th>Formule Basic</th>
-                            <th>Formule Premium</th>
-                            <th>Formule Luxe</th>
+                            <th class="lang-fr">Type de véhicule</th>
+                            <th class="lang-en">Vehicle type</th>
+                            <th class="lang-fr">Formule Basic</th>
+                            <th class="lang-en">Basic Formula</th>
+                            <th class="lang-fr">Formule Premium</th>
+                            <th class="lang-en">Premium Formula</th>
+                            <th class="lang-fr">Formule Luxe</th>
+                            <th class="lang-en">Luxury Formula</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="vehicle-type">Citadine (Peugeot 208, Renault Clio...)</td>
+                            <td class="vehicle-type lang-fr">Citadine (Peugeot 208, Renault Clio...)</td>
+                            <td class="vehicle-type lang-en">City car (Peugeot 208, Renault Clio...)</td>
                             <td>60€</td>
                             <td>90€</td>
                             <td>120€</td>
                         </tr>
                         <tr>
-                            <td class="vehicle-type">Compacte (VW Golf, Renault Mégane...)</td>
+                            <td class="vehicle-type lang-fr">Compacte (VW Golf, Renault Mégane...)</td>
+                            <td class="vehicle-type lang-en">Compact (VW Golf, Renault Mégane...)</td>
                             <td>70€</td>
                             <td>100€</td>
                             <td>130€</td>
                         </tr>
                         <tr>
-                            <td class="vehicle-type">Berline (Peugeot 508, BMW Série 3...)</td>
+                            <td class="vehicle-type lang-fr">Berline (Peugeot 508, BMW Série 3...)</td>
+                            <td class="vehicle-type lang-en">Sedan (Peugeot 508, BMW Series 3...)</td>
                             <td>80€</td>
                             <td>110€</td>
                             <td>140€</td>
                         </tr>
                         <tr>
-                            <td class="vehicle-type">SUV (Peugeot 3008, Renault Kadjar...)</td>
+                            <td class="vehicle-type lang-fr">SUV (Peugeot 3008, Renault Kadjar...)</td>
+                            <td class="vehicle-type lang-en">SUV (Peugeot 3008, Renault Kadjar...)</td>
                             <td>90€</td>
                             <td>120€</td>
                             <td>150€</td>
                         </tr>
                     </tbody>
                 </table>
-                <p class="price-note">* Prix indicatifs - Devis personnalisé selon l'état de votre véhicule</p>
+                <p class="price-note lang-fr">* Prix indicatifs - Devis personnalisé selon l'état de votre véhicule</p>
+                <p class="price-note lang-en">* Indicative prices - Personalized quote according to your vehicle condition</p>
             </div>
             
             <!-- Tableau des tarifs intérieur + extérieur -->
             <div class="tarifs-section">
-                <h2>Tarifs Nettoyage Intérieur + Extérieur</h2>
+                <h2 class="lang-fr">Tarifs Nettoyage Intérieur + Extérieur</h2>
+                <h2 class="lang-en">Interior + Exterior Cleaning Prices</h2>
                 <table class="tarifs-table">
                     <thead>
                         <tr>
-                            <th>Type de véhicule</th>
-                            <th>Formule Basic</th>
-                            <th>Formule Premium</th>
-                            <th>Formule Luxe</th>
+                            <th class="lang-fr">Type de véhicule</th>
+                            <th class="lang-en">Vehicle type</th>
+                            <th class="lang-fr">Formule Basic</th>
+                            <th class="lang-en">Basic Formula</th>
+                            <th class="lang-fr">Formule Premium</th>
+                            <th class="lang-en">Premium Formula</th>
+                            <th class="lang-fr">Formule Luxe</th>
+                            <th class="lang-en">Luxury Formula</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="vehicle-type">Citadine (Peugeot 208, Renault Clio...)</td>
+                            <td class="vehicle-type lang-fr">Citadine (Peugeot 208, Renault Clio...)</td>
+                            <td class="vehicle-type lang-en">City car (Peugeot 208, Renault Clio...)</td>
                             <td>90€</td>
                             <td>130€</td>
                             <td>170€</td>
                         </tr>
                         <tr>
-                            <td class="vehicle-type">Compacte (VW Golf, Renault Mégane...)</td>
+                            <td class="vehicle-type lang-fr">Compacte (VW Golf, Renault Mégane...)</td>
+                            <td class="vehicle-type lang-en">Compact (VW Golf, Renault Mégane...)</td>
                             <td>100€</td>
                             <td>140€</td>
                             <td>180€</td>
                         </tr>
                         <tr>
-                            <td class="vehicle-type">Berline (Peugeot 508, BMW Série 3...)</td>
+                            <td class="vehicle-type lang-fr">Berline (Peugeot 508, BMW Série 3...)</td>
+                            <td class="vehicle-type lang-en">Sedan (Peugeot 508, BMW Series 3...)</td>
                             <td>110€</td>
                             <td>150€</td>
                             <td>190€</td>
                         </tr>
                         <tr>
-                            <td class="vehicle-type">SUV (Peugeot 3008, Renault Kadjar...)</td>
+                            <td class="vehicle-type lang-fr">SUV (Peugeot 3008, Renault Kadjar...)</td>
+                            <td class="vehicle-type lang-en">SUV (Peugeot 3008, Renault Kadjar...)</td>
                             <td>120€</td>
                             <td>160€</td>
                             <td>200€</td>
                         </tr>
                     </tbody>
                 </table>
-                <p class="price-note">* Prix indicatifs - Devis personnalisé selon l'état de votre véhicule</p>
+                <p class="price-note lang-fr">* Prix indicatifs - Devis personnalisé selon l'état de votre véhicule</p>
+                <p class="price-note lang-en">* Indicative prices - Personalized quote according to your vehicle condition</p>
             </div>
             
             <!-- Section Utilitaires Artisans -->
             <div class="utilitaires">
                 <div class="utilitaires-header">
-                    <h2>Offre Spéciale Utilitaires Artisans</h2>
-                    <p>Des tarifs adaptés pour les professionnels</p>
+                    <h2 class="lang-fr">Offre Spéciale Utilitaires Artisans</h2>
+                    <h2 class="lang-en">Special Offer for Artisans' Utility Vehicles</h2>
+                    <p class="lang-fr">Des tarifs adaptés pour les professionnels</p>
+                    <p class="lang-en">Adapted prices for professionals</p>
                 </div>
                 <div class="utilitaires-content">
                     <div class="utilitaires-text">
-                        <p>Nous comprenons l'importance d'un véhicule utilitaire propre et bien entretenu pour votre image professionnelle. C'est pourquoi nous proposons des tarifs spécifiques pour les artisans et professionnels.</p>
+                        <p class="lang-fr">Nous comprenons l'importance d'un véhicule utilitaire propre et bien entretenu pour votre image professionnelle. C'est pourquoi nous proposons des tarifs spécifiques pour les artisans et professionnels.</p>
+                        <p class="lang-en">We understand the importance of a clean and well-maintained utility vehicle for your professional image. That's why we offer specific prices for artisans and professionals.</p>
                         
-                        <h3>Nos prestations pour utilitaires :</h3>
+                        <h3 class="lang-fr">Nos prestations pour utilitaires :</h3>
+                        <h3 class="lang-en">Our services for utility vehicles:</h3>
                         <ul class="formule-features">
-                            <li><i class="fas fa-check"></i> <strong>Nettoyage complet de l'habitacle</strong> - Sièges, tableau de bord, sol</li>
-                            <li><i class="fas fa-check"></i> <strong>Nettoyage de la zone de chargement</strong> - Benne, plateau, aménagements</li>
-                            <li><i class="fas fa-check"></i> <strong>Dépoussiérage des outils et équipements</strong></li>
-                            <li><i class="fas fa-check"></i> <strong>Nettoyage extérieur complet</strong> - Carrosserie, vitres, jantes</li>
-                            <li><i class="fas fa-check"></i> <strong>Désodorisation professionnelle</strong></li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> <strong>Nettoyage complet de l'habitacle</strong> - Sièges, tableau de bord, sol</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> <strong>Complete interior cleaning</strong> - Seats, dashboard, floor</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> <strong>Nettoyage de la zone de chargement</strong> - Benne, plateau, aménagements</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> <strong>Loading area cleaning</strong> - Dump body, platform, fittings</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> <strong>Dépoussiérage des outils et équipements</strong></li>
+                            <li class="lang-en"><i class="fas fa-check"></i> <strong>Dusting of tools and equipment</strong></li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> <strong>Nettoyage extérieur complet</strong> - Carrosserie, vitres, jantes</li>
+                            <li class="lang-en"><i class="fas fa-check"></i> <strong>Complete exterior cleaning</strong> - Bodywork, windows, wheels</li>
+                            <li class="lang-fr"><i class="fas fa-check"></i> <strong>Désodorisation professionnelle</strong></li>
+                            <li class="lang-en"><i class="fas fa-check"></i> <strong>Professional deodorization</strong></li>
                         </ul>
                         
-                        <h3>Tarifs utilitaires (sur devis) :</h3>
+                        <h3 class="lang-fr">Tarifs utilitaires (sur devis) :</h3>
+                        <h3 class="lang-en">Utility vehicle prices (on quote):</h3>
                         <ul class="formule-features">
-                            <li><i class="fas fa-euro-sign"></i> <strong>Petit utilitaire</strong> (type Renault Kangoo) : à partir de 80€</li>
-                            <li><i class="fas fa-euro-sign"></i> <strong>Utilitaire moyen</strong> (type Renault Trafic) : à partir de 100€</li>
-                            <li><i class="fas fa-euro-sign"></i> <strong>Grand utilitaire</strong> (type Renault Master) : à partir de 130€</li>
-                            <li><i class="fas fa-euro-sign"></i> <strong>Camionnette avec aménagement</strong> : sur devis personnalisé</li>
+                            <li class="lang-fr"><i class="fas fa-euro-sign"></i> <strong>Petit utilitaire</strong> (type Renault Kangoo) : à partir de 80€</li>
+                            <li class="lang-en"><i class="fas fa-euro-sign"></i> <strong>Small utility</strong> (Renault Kangoo type) : from 80€</li>
+                            <li class="lang-fr"><i class="fas fa-euro-sign"></i> <strong>Utilitaire moyen</strong> (type Renault Trafic) : à partir de 100€</li>
+                            <li class="lang-en"><i class="fas fa-euro-sign"></i> <strong>Medium utility</strong> (Renault Trafic type) : from 100€</li>
+                            <li class="lang-fr"><i class="fas fa-euro-sign"></i> <strong>Grand utilitaire</strong> (type Renault Master) : à partir de 130€</li>
+                            <li class="lang-en"><i class="fas fa-euro-sign"></i> <strong>Large utility</strong> (Renault Master type) : from 130€</li>
+                            <li class="lang-fr"><i class="fas fa-euro-sign"></i> <strong>Camionnette avec aménagement</strong> : sur devis personnalisé</li>
+                            <li class="lang-en"><i class="fas fa-euro-sign"></i> <strong>Van with fittings</strong> : personalized quote</li>
                         </ul>
                         
-                        <p><em>Forfaits mensuels ou trimestriels disponibles pour les professionnels - Contactez-nous pour un devis personnalisé !</em></p>
+                        <p class="lang-fr"><em>Forfaits mensuels ou trimestriels disponibles pour les professionnels - Contactez-nous pour un devis personnalisé !</em></p>
+                        <p class="lang-en"><em>Monthly or quarterly packages available for professionals - Contact us for a personalized quote!</em></p>
                         
-                        <a href="index.html#contact" class="btn">Devis professionnel gratuit</a>
+                        <a href="index.html#contact" class="btn lang-fr">Devis professionnel gratuit</a>
+                        <a href="index.html#contact" class="btn lang-en">Free professional quote</a>
                     </div>
                     <div class="utilitaires-image">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nettoyage de véhicule utilitaire VERTuCLEAN">
@@ -852,36 +988,47 @@
             
             <!-- Section Déplacement -->
             <div class="deplacement">
-                <h2>Frais de Déplacement</h2>
-                <p>Nous nous déplaçons directement chez vous dans le Lot et l'Aveyron</p>
+                <h2 class="lang-fr">Frais de Déplacement</h2>
+                <h2 class="lang-en">Travel Fees</h2>
+                <p class="lang-fr">Nous nous déplaçons directement chez vous dans le Lot et l'Aveyron</p>
+                <p class="lang-en">We come directly to your location in Lot and Aveyron</p>
                 
                 <div class="deplacement-grid">
                     <div class="deplacement-card">
-                        <div class="deplacement-distance">Jusqu'à 30km</div>
+                        <div class="deplacement-distance lang-fr">Jusqu'à 30km</div>
+                        <div class="deplacement-distance lang-en">Up to 30km</div>
                         <div class="deplacement-price">GRATUIT</div>
-                        <p>Autour de Cajarc</p>
+                        <p class="lang-fr">Autour de Cajarc</p>
+                        <p class="lang-en">Around Cajarc</p>
                     </div>
                     
                     <div class="deplacement-card">
-                        <div class="deplacement-distance">De 30km à 50km</div>
+                        <div class="deplacement-distance lang-fr">De 30km à 50km</div>
+                        <div class="deplacement-distance lang-en">From 30km to 50km</div>
                         <div class="deplacement-price">+20€</div>
-                        <p>Cahors, Figeac, Villefranche-de-Rouergue</p>
+                        <p class="lang-fr">Cahors, Figeac, Villefranche-de-Rouergue</p>
+                        <p class="lang-en">Cahors, Figeac, Villefranche-de-Rouergue</p>
                     </div>
                     
                     <div class="deplacement-card">
-                        <div class="deplacement-distance">De 50km à 70km</div>
+                        <div class="deplacement-distance lang-fr">De 50km à 70km</div>
+                        <div class="deplacement-distance lang-en">From 50km to 70km</div>
                         <div class="deplacement-price">+30€</div>
-                        <p>Rodez, Gourdon, Decazeville</p>
+                        <p class="lang-fr">Rodez, Gourdon, Decazeville</p>
+                        <p class="lang-en">Rodez, Gourdon, Decazeville</p>
                     </div>
                     
                     <div class="deplacement-card">
-                        <div class="deplacement-distance">De 70km à 90km</div>
+                        <div class="deplacement-distance lang-fr">De 70km à 90km</div>
+                        <div class="deplacement-distance lang-en">From 70km to 90km</div>
                         <div class="deplacement-price">+40€</div>
-                        <p>Zone étendue Lot & Aveyron</p>
+                        <p class="lang-fr">Zone étendue Lot & Aveyron</p>
+                        <p class="lang-en">Extended area Lot & Aveyron</p>
                     </div>
                 </div>
                 
-                <p style="margin-top: 30px;"><em>Départ de Cajarc (46160) - Forfait déplacement ajouté au prix de la prestation</em></p>
+                <p style="margin-top: 30px;" class="lang-fr"><em>Départ de Cajarc (46160) - Forfait déplacement ajouté au prix de la prestation</em></p>
+                <p style="margin-top: 30px;" class="lang-en"><em>Departure from Cajarc (46160) - Travel fee added to the service price</em></p>
             </div>
         </div>
     </section>
@@ -892,35 +1039,39 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>VERTuCLEAN - Nettoyage Écologique</h3>
-                    <p>Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron.</p>
+                    <p class="lang-fr">Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron.</p>
+                    <p class="lang-en">Ecological cleaning company specialized in window, textile and vehicle cleaning for individuals and professionals in Lot and Aveyron.</p>
                     <div class="social-links">
                         <a href="https://www.youtube.com/@VERTuCLEAN" target="_blank" aria-label="Chaîne YouTube VERTuCLEAN"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Services de Nettoyage</h3>
+                    <h3 class="lang-fr">Services de Nettoyage</h3>
+                    <h3 class="lang-en">Cleaning Services</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html#services">Nettoyage de vitres écologique</a></li>
-                        <li><a href="index.html#services">Nettoyage de textiles écologique</a></li>
-                        <li><a href="carprices.html">Nettoyage de véhicules écologique</a></li>
-                        <li><a href="index.html#services">Nettoyage de fin de chantier</a></li>
-                        <li><a href="index.html#localisation">Zone d'intervention Lot-Aveyron</a></li>
+                        <li><a href="index.html#services" class="lang-fr">Nettoyage de vitres écologique</a><a href="index.html#services" class="lang-en">Ecological window cleaning</a></li>
+                        <li><a href="index.html#services" class="lang-fr">Nettoyage de textiles écologique</a><a href="index.html#services" class="lang-en">Ecological textile cleaning</a></li>
+                        <li><a href="carprices.html" class="lang-fr">Nettoyage de véhicules écologique</a><a href="carprices.html" class="lang-en">Ecological vehicle cleaning</a></li>
+                        <li><a href="index.html#services" class="lang-fr">Nettoyage de fin de chantier</a><a href="index.html#services" class="lang-en">End of construction cleaning</a></li>
+                        <li><a href="index.html#localisation" class="lang-fr">Zone d'intervention Lot-Aveyron</a><a href="index.html#localisation" class="lang-en">Service Area Lot-Aveyron</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Entreprise de Nettoyage</h3>
+                    <h3 class="lang-fr">Entreprise de Nettoyage</h3>
+                    <h3 class="lang-en">Cleaning Company</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html#apropos">À propos de VERTuCLEAN</a></li>
-                        <li><a href="index.html#contact">Devis gratuit nettoyage</a></li>
-                        <li><a href="index.html#contact">Contact entreprise nettoyage</a></li>
-                        <li><a href="index.html#localisation">Villes desservies Lot (46)</a></li>
+                        <li><a href="index.html#apropos" class="lang-fr">À propos de VERTuCLEAN</a><a href="index.html#apropos" class="lang-en">About VERTuCLEAN</a></li>
+                        <li><a href="index.html#contact" class="lang-fr">Devis gratuit nettoyage</a><a href="index.html#contact" class="lang-en">Free cleaning quote</a></li>
+                        <li><a href="index.html#contact" class="lang-fr">Contact entreprise nettoyage</a><a href="index.html#contact" class="lang-en">Contact cleaning company</a></li>
+                        <li><a href="index.html#localisation" class="lang-fr">Villes desservies Lot (46)</a><a href="index.html#localisation" class="lang-en">Served towns Lot (46)</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contact Nettoyage</h3>
+                    <h3 class="lang-fr">Contact Nettoyage</h3>
+                    <h3 class="lang-en">Cleaning Contact</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Cajarc 46160 - Lot</li>
                         <li><i class="fas fa-phone"></i> 07 55 61 45 67</li>
@@ -932,7 +1083,8 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 VERTuCLEAN - Entreprise de nettoyage écologique spécialisée vitres, textiles et véhicules dans le Lot et l'Aveyron. Tous droits réservés.</p>
+                <p class="lang-fr">&copy; 2023 VERTuCLEAN - Entreprise de nettoyage écologique spécialisée vitres, textiles et véhicules dans le Lot et l'Aveyron. Tous droits réservés.</p>
+                <p class="lang-en">&copy; 2023 VERTuCLEAN - Ecological cleaning company specialized in windows, textiles and vehicles in Lot and Aveyron. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -962,6 +1114,29 @@
             } else {
                 header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
             }
+        });
+
+        // Gestion du changement de langue
+        const languageOptions = document.querySelectorAll('.language-option');
+        
+        languageOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = option.getAttribute('data-lang');
+                
+                // Mettre à jour les classes actives
+                languageOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+                // Changer la langue
+                if (lang === 'en') {
+                    document.body.classList.add('english-version');
+                    document.documentElement.lang = 'en';
+                } else {
+                    document.body.classList.remove('english-version');
+                    document.documentElement.lang = 'fr';
+                }
+            });
         });
     </script>
 </body>
