@@ -190,32 +190,20 @@
             padding: 20px 0; 
         }
         
-        .logo { 
-            font-size: 1.8rem; 
-            font-weight: 700; 
-            color: var(--dark); 
-            text-decoration: none; 
-            display: flex; 
-            align-items: center; 
-            font-family: 'DM Serif Display', serif; 
-            letter-spacing: 0.5px; 
-            position: relative; 
-            padding: 5px 15px; 
-        }
-        
-        .logo::before { 
-            content: ''; 
-            position: absolute; 
-            top: -5px; 
-            left: -5px; 
-            right: -5px; 
-            bottom: -5px; 
-            background: linear-gradient(45deg, #d0e1c1, #ffffff, #bac697, #ffffff, #d0e1c1); 
-            background-size: 400% 400%; 
-            border-radius: 10px; 
-            z-index: -1; 
-            animation: halo 6s ease infinite; 
-            opacity: 0.7; 
+        .logo {
+    padding: 0; /* Supprime le padding existant */
+}
+
+.logo-image {
+    height: 50px; /* Ajustez la hauteur selon vos besoins */
+    width: auto;
+    display: block;
+}
+
+/* Supprimez ou commentez l'animation halo si elle ne convient plus */
+.logo::before {
+    display: none;
+}
         }
         
         @keyframes halo { 
@@ -791,9 +779,8 @@
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
-                <i class="fas fa-leaf"></i>
-                VERTuCLEAN
-            </a>
+    <img src="https://github.com/MakesenSelection/vertuclean2/blob/33b1d7338f29ca4776e34e43c42bbd85bb2e09d2/logo.png" alt="VERTUCLEAN - Nettoyage Écologique" class="logo-image">
+</a>
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
