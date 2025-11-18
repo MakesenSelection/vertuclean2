@@ -191,40 +191,16 @@
         }
         
         .logo {
-    padding: 0; /* Supprime le padding existant */
-}
-
-.logo-image {
-    height: 50px; /* Ajustez la hauteur selon vos besoins */
-    width: auto;
-    display: block;
-}
-
-/* Supprimez ou commentez l'animation halo si elle ne convient plus */
-.logo::before {
-    display: none;
-}
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 5px 0;
         }
         
-        @keyframes halo { 
-            0% { 
-                background-position: 0% 50%; 
-                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); 
-            } 
-            50% { 
-                background-position: 100% 50%; 
-                box-shadow: 0 0 25px rgba(186, 198, 151, 0.8); 
-            } 
-            100% { 
-                background-position: 0% 50%; 
-                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); 
-            } 
-        }
-        
-        .logo i { 
-            margin-right: 10px; 
-            font-size: 2rem; 
-            color: var(--primary-dark); 
+        .logo-image {
+            height: 60px;
+            width: auto;
+            display: block;
         }
         
         nav ul { 
@@ -742,6 +718,10 @@
             .language-switcher {
                 margin-top: 10px;
             }
+            
+            .logo-image {
+                height: 50px;
+            }
         }
         
         @media (max-width: 576px) { 
@@ -772,6 +752,10 @@
             .services-grid { 
                 grid-template-columns: 1fr; 
             } 
+            
+            .logo-image {
+                height: 45px;
+            }
         }
     </style>
 </head>
@@ -779,8 +763,8 @@
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
-    <img src="https://github.com/MakesenSelection/vertuclean2/blob/33b1d7338f29ca4776e34e43c42bbd85bb2e09d2/logo.png" alt="VERTUCLEAN - Nettoyage Écologique" class="logo-image">
-</a>
+                <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/logo.png" alt="VERTuCLEAN - Nettoyage Écologique" class="logo-image">
+            </a>
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
