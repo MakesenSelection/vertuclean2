@@ -104,7 +104,7 @@
             width: 100%; 
             max-width: 1200px; 
             margin: 0 auto; 
-            padding: 0 10px; 
+            padding: 0 20px; 
         }
         
         section { 
@@ -173,7 +173,7 @@
             background-color: #d0d09e; 
         }
         
-        /* Header */
+        /* Header avec logo TRÈS GRAND */
         header { 
             background-color: var(--white); 
             box-shadow: var(--shadow); 
@@ -181,26 +181,31 @@
             width: 100%; 
             top: 0; 
             z-index: 1000; 
+            height: 130px; /* Hauteur augmentée pour le grand logo */
+            display: flex;
+            align-items: center;
         }
         
         .header-container { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            padding: 25px 0; 
+            width: 100%;
+            padding: 10px 0;
         }
         
         .logo {
             display: flex;
             align-items: center;
             text-decoration: none;
-            padding: 5px 0;
+            height: 100%;
         }
         
         .logo-image {
-            height: 150px;
+            height: 110px; /* LOGO TRÈS GRAND */
             width: auto;
             display: block;
+            max-height: 110px;
         }
         
         nav ul { 
@@ -257,13 +262,13 @@
             color: var(--dark); 
         }
         
-        /* Hero Section */
+        /* Hero Section - Ajusté pour le header plus grand */
         .hero { 
             background: linear-gradient(135deg, rgba(208, 225, 193, 0.2), rgba(186, 198, 151, 0.2)), url('https://github.com/MakesenSelection/vertuclean2/raw/main/nettoyage-lot-aveyron.png'); 
             background-size: cover; 
             background-position: center; 
             color: var(--cream); 
-            padding: 320px 0 120px; 
+            padding: 230px 0 120px; /* Augmenté pour compenser le header plus grand */
             text-align: center; 
         }
         
@@ -672,16 +677,25 @@
         }
         
         @media (max-width: 768px) { 
+            header {
+                height: 100px; /* Réduit sur tablette */
+            }
+            
+            .logo-image {
+                height: 85px; /* Reste grand sur tablette */
+                max-height: 85px;
+            }
+            
             .menu-toggle { 
                 display: block; 
             } 
             
             nav ul { 
                 position: fixed; 
-                top: 80px; 
+                top: 100px; /* Ajusté pour le header réduit */
                 left: -100%; 
                 width: 100%; 
-                height: calc(100vh - 80px); 
+                height: calc(100vh - 100px); 
                 background-color: var(--white); 
                 flex-direction: column; 
                 align-items: center; 
@@ -697,6 +711,10 @@
             nav ul li { 
                 margin: 15px 0; 
             } 
+            
+            .hero { 
+                padding: 180px 0 80px; /* Ajusté pour tablette */
+            }
             
             .hero-btns { 
                 flex-direction: column; 
@@ -718,19 +736,24 @@
             .language-switcher {
                 margin-top: 10px;
             }
-            
-            .logo-image {
-                height: 105px;
-            }
         }
         
         @media (max-width: 576px) { 
+            header {
+                height: 90px; /* Réduit sur mobile */
+            }
+            
+            .logo-image {
+                height: 75px; /* Reste visible sur mobile */
+                max-height: 75px;
+            }
+            
             section { 
-                padding: 55px 0; 
+                padding: 60px 0; 
             } 
             
             .hero { 
-                padding: 150px 0 80px; 
+                padding: 160px 0 60px; /* Ajusté pour mobile */
             } 
             
             .hero-title { 
@@ -752,10 +775,6 @@
             .services-grid { 
                 grid-template-columns: 1fr; 
             } 
-            
-            .logo-image {
-                height: 85px;
-            }
         }
     </style>
 </head>
