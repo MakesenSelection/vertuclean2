@@ -28,7 +28,7 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "VERTUCLEAN",
+        "name": "VERTuCLEAN",
         "description": "Entreprise de nettoyage écologique spécialisée dans le nettoyage de vitres, textiles et véhicules pour particuliers et professionnels dans le Lot et l'Aveyron",
         "url": "https://www.vertuclean.fr",
         "telephone": "+33755614567",
@@ -190,43 +190,23 @@
             padding: 20px 0; 
         }
         
+        /* === MODIFICATION LOGO (1) : Style simplifié pour l'image === */
         .logo { 
-            font-size: 1.8rem; 
-            font-weight: 700; 
-            color: var(--dark); 
-            text-decoration: none; 
             display: flex; 
             align-items: center; 
-            font-family: 'DM Serif Display', serif; 
-            letter-spacing: 0.5px; 
-            position: relative; 
-            padding: 5px 15px; 
+            height: 100%; 
         }
         
-        .logo::before { 
-    display: none; 
-}
-        
-        @keyframes halo { 
-            0% { 
-                background-position: 0% 50%; 
-                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); 
-            } 
-            50% { 
-                background-position: 100% 50%; 
-                box-shadow: 0 0 25px rgba(186, 198, 151, 0.8); 
-            } 
-            100% { 
-                background-position: 0% 50%; 
-                box-shadow: 0 0 15px rgba(186, 198, 151, 0.5); 
-            } 
+        .logo img {
+            height: 60px; /* Ajustez cette valeur si nécessaire */
+            width: auto;
+            transition: var(--transition);
         }
         
-        .logo i { 
-            margin-right: 10px; 
-            font-size: 2rem; 
-            color: var(--primary-dark); 
+        .logo img:hover {
+            opacity: 0.9;
         }
+        /* === FIN MODIFICATION LOGO === */
         
         nav ul { 
             display: flex; 
@@ -590,12 +570,14 @@
             padding: 60px 0 30px; 
         }
         
+        /* === MODIFICATION FOOTER (2) : Colonnes côte à côte === */
         .footer-content { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            grid-template-columns: repeat(4, 1fr); /* 4 colonnes de largeur égale */
             gap: 40px; 
             margin-bottom: 40px; 
         }
+        /* === FIN MODIFICATION FOOTER === */
         
         .footer-column h3 { 
             color: var(--white); 
@@ -694,6 +676,11 @@
             .contact-container { 
                 flex-direction: column; 
             } 
+            
+            /* === MODIFICATION FOOTER RESPONSIVE === */
+            .footer-content { 
+                grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+            }
         }
         
         @media (max-width: 768px) { 
@@ -743,6 +730,11 @@
             .language-switcher {
                 margin-top: 10px;
             }
+            
+            /* === MODIFICATION LOGO RESPONSIVE === */
+            .logo img {
+                height: 50px; /* Logo légèrement plus petit sur mobile */
+            }
         }
         
         @media (max-width: 576px) { 
@@ -773,17 +765,26 @@
             .services-grid { 
                 grid-template-columns: 1fr; 
             } 
+            
+            /* === MODIFICATION FOOTER RESPONSIVE === */
+            .footer-content { 
+                grid-template-columns: 1fr; /* 1 colonne sur mobile */
+            }
+            
+            .logo img {
+                height: 45px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- === MODIFICATION LOGO (1) : Nouvelle image avec le bon lien === -->
     <header>
         <div class="container header-container">
-           <a href="#" class="logo">
-    <img src="https://raw.githubusercontent.com/MakesenSelection/vertuclean2/4b866232bfec10a4416361a1efb5ec5c4e323829/logo1.png" alt="VERTUCLEAN" style="height: 35px; margin-right: 12px; position: relative; z-index: 2;">
-</a>
-                
-            
+            <a href="#" class="logo">
+                <img src="https://raw.githubusercontent.com/MakesenSelection/vertuclean2/3ff9f7efe87c76b43fbfd55ec2b42070aa0ba2d8/logovert.png" 
+                     alt="VERTuCLEAN - Service de Nettoyage Écologique">
+            </a>
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -850,49 +851,6 @@
                 <a href="#contact" class="btn lang-en">Free Cleaning Quote</a>
                 <a href="#services" class="btn btn-secondary lang-fr">Nos Services Écologiques</a>
                 <a href="#services" class="btn btn-secondary lang-en">Our Ecological Services</a>
-            </div>
-        </div>
-    </section>
-
-        <!-- Section Avis Google -->
-    <section class="reviews" id="avis" style="padding: 80px 0; background-color: var(--primary); text-align: center;">
-        <div class="container">
-            <h2 class="lang-fr">Ce que disent nos clients</h2>
-            <h2 class="lang-en">What Our Clients Say</h2>
-            
-            <p class="lang-fr" style="max-width: 700px; margin: 0 auto 40px; font-size: 1.1rem;">
-                Découvrez les retours de nos clients satisfaits par nos services de nettoyage écologique dans le Lot et l'Aveyron.
-            </p>
-            <p class="lang-en" style="max-width: 700px; margin: 0 auto 40px; font-size: 1.1rem;">
-                Discover the feedback from our satisfied customers about our ecological cleaning services in Lot and Aveyron.
-            </p>
-            
-            <!-- Badge statique simple (en attendant un widget dynamique) -->
-            <div class="google-badge" style="margin: 30px auto 40px; display: inline-block; padding: 25px 40px; background: var(--white); border-radius: 15px; box-shadow: var(--shadow); max-width: 500px;">
-                <div style="font-size: 3rem; color: #FFC107; margin-bottom: 10px; line-height: 1;">
-                    ★★★★★
-                </div>
-                <div style="font-size: 2.5rem; font-weight: 700; color: var(--dark); margin-bottom: 10px;">
-                    5<span style="font-size: 1.5rem; color: var(--text-light); margin-left: 5px;">/5</span>
-                </div>
-                <p style="color: var(--text-light); margin-bottom: 20px; font-size: 1.1rem;">
-                    <span class="lang-fr">Basé sur <strong style="color: var(--dark);">5 avis</strong> Google</span>
-                    <span class="lang-en">Based on <strong style="color: var(--dark);">5 reviews</strong> on Google</span>
-                </p>
-                <a href="https://g.page/r/CfSnIVOaVAt1EAE/review" 
-                   target="_blank" 
-                   class="btn" 
-                   style="background-color: var(--primary-dark); color: var(--dark); margin: 10px;">
-                    <span class="lang-fr"><i class="fab fa-google"></i> Voir tous nos avis</span>
-                    <span class="lang-en"><i class="fab fa-google"></i> See all our reviews</span>
-                </a>
-                <a href="https://g.page/r/CfSnIVOaVAt1EAE/review" 
-                   target="_blank" 
-                   class="btn btn-secondary" 
-                   style="background-color: var(--secondary); color: var(--dark); margin: 10px;">
-                    <span class="lang-fr"><i class="fas fa-pen"></i> Laisser un avis</span>
-                    <span class="lang-en"><i class="fas fa-pen"></i> Leave a review</span>
-                </a>
             </div>
         </div>
     </section>
@@ -1192,6 +1150,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <!-- === MODIFICATION FOOTER (2) : Les 4 colonnes sont désormais côte à côte === -->
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>VERTuCLEAN - Nettoyage Écologique</h3>
@@ -1199,10 +1158,7 @@
                     <p class="lang-en">Ecological cleaning company specialized in window, textile, vehicle and end of construction cleaning for individuals and professionals in Lot and Aveyron.</p>
                     <div class="social-links">
                         <a href="https://www.youtube.com/@VERTuCLEAN" target="_blank" aria-label="Chaîne YouTube VERTuCLEAN"><i class="fab fa-youtube"></i></a>
-                        
-
-</div>
-        </div>
+                    </div>
                 </div>
                 
                 <div class="footer-column">
