@@ -69,22 +69,22 @@
     }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iI2QwZTFjMSIvPgo8cGF0aCBkPSJNNDIgMjRDMzggMzIgMzYgMzYgMzIgNDBDMjggMzYgMjYgMzIgMjIgMjRDMjIgMTggMjYgMTYgMzIgMTZDMzggMTYgNDIgMTggNDIgMjRaIiBmaWxsPSIjYmFjNjk3Ii8+CjxwYXRoIGQ9Ik0zMiAxNkMzOC42MTcgMTYgNDQgMjEuMzgzIDQ0IDI4QzQ0IDM0LjYxNyAzOC42MTcgNDAgMzIgNDBDMjUuMzgzIDQwIDIwIDM0LjYxNyAyMCAyOEMyMCAyMS4zODMgMjUuMzgzIDE2IDMyIDE2WiIgZmlsbD0iI2Q3ZDdhZSIvPgo8L3N2Zz4K"/>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iOCIgZmlsbD0iIzQzMzJhYiIvPgo8cGF0aCBkPSJNMzIgMTZDMzggMTYgNDIgMTggNDIgMjRDMzggMzIgMzYgMzYgMzIgNDBDMjggMzYgMjYgMzIgMjIgMjRDMjIgMTggMjYgMTYgMzIgMTZaIiBmaWxsPSIjZmY1NzU3Ii8+Cjwvc3ZnPgo=">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --primary: #d0e1c1; 
-            --primary-dark: #bac697; 
-            --secondary: #d7d7ae; 
-            --light: #f8f9fa; 
-            --dark: #4a5a3a; 
-            --text: #333333; 
-            --text-light: #6c757d; 
-            --white: #ffffff; 
+            --primary: #4332ab;     /* Violet du logo */
+            --primary-dark: #362790; /* Violet légèrement plus foncé */
+            --secondary: #ff5757;   /* Rouge/Rose du logo */
+            --light: #f8f9fa;
+            --dark: #2a2a2a;        /* Texte sombre */
+            --text: #333333;
+            --text-light: #6c757d;
+            --white: #ffffff;
             --cream: #fefefe;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-            --transition: all 0.3s ease; 
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
         }
         
         * { 
@@ -114,7 +114,7 @@
         h1, h2, h3, h4 { 
             margin-bottom: 1rem; 
             line-height: 1.2; 
-            color: var(--dark); 
+            color: var(--white); /* Changé de var(--dark) à var(--white) */
         }
         
         h1 { 
@@ -137,7 +137,7 @@
             transform: translateX(-50%); 
             width: 80px; 
             height: 4px; 
-            background-color: var(--primary-dark); 
+            background-color: var(--secondary); 
         }
         
         p { 
@@ -148,8 +148,8 @@
         .btn { 
             display: inline-block; 
             padding: 12px 30px; 
-            background-color: var(--primary-dark); 
-            color: var(--dark); 
+            background-color: var(--primary); 
+            color: var(--white); 
             border: none; 
             border-radius: 50px; 
             font-weight: 600; 
@@ -160,68 +160,54 @@
         }
         
         .btn:hover { 
-            background-color: var(--primary); 
+            background-color: var(--primary-dark); 
             transform: translateY(-3px); 
+            color: var(--white);
         }
         
         .btn-secondary { 
             background-color: var(--secondary); 
-            color: var(--dark); 
+            color: var(--white); 
         }
         
         .btn-secondary:hover { 
-            background-color: #d0d09e; 
+            background-color: #e04a4a; 
+            color: var(--white);
         }
         
-        /* Header - MODIF HEADER (1/4) */
+        /* Header */
         header { 
-    background-color: var(--white); 
-    box-shadow: var(--shadow); 
-    position: fixed; 
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
-    padding: 0;
-    height: 70px; /* Conserve cette hauteur */
-    overflow: visible; /* Permet au logo de dépasser */
-}
+            background-color: var(--white); 
+            box-shadow: var(--shadow); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            padding: 0;
+            height: 70px;
+        }
         
         .header-container { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            padding: 0; /* MODIF HEADER */
-            height: 100%; /* MODIF HEADER */
+            padding: 0;
+            height: 100%;
         }
         
-        /* Logo - MODIF HEADER (2/4) */
-      .logo { 
-    display: flex; 
-    align-items: center; 
-    height: 100%; 
-    padding: 0; /* Supprime le padding */
-    margin-top: -10px; /* Remonte le logo pour qu'il dépasse */
-}}
-        
-      .logo img {
-    height: 100px;
-    width: auto;
-    transition: var(--transition);
-    position: relative;
-    z-index: 1001;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)); /* Ombre légère */
-}
+        /* Logo - Agrandi x5 */
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
 
-.logo {
-    display: flex; 
-    align-items: center; 
-    height: 100%; 
-    padding: 0;
-    margin-top: -15px; /* Dépasse encore plus */
-}
-        
-        .logo img:hover {
-            opacity: 0.9;
+        .logo img {
+            height: 300px; /* Augmenté de 60px à 300px (x5) */
+            width: auto;
+            transition: var(--transition);
+            position: relative;
+            top: 10px; /* Ajustement pour centrer verticalement */
         }
         
         nav ul { 
@@ -241,14 +227,15 @@
             transition: var(--transition); 
         }
         
+        /* Liens de navigation au survol */
         nav ul li a:hover { 
-            color: var(--primary-dark); 
+            color: var(--primary); 
         }
         
         .language-switcher {
             display: flex;
             margin-left: 20px;
-            border: 1px solid var(--primary-dark);
+            border: 1px solid var(--primary);
             border-radius: 20px;
             overflow: hidden;
         }
@@ -256,19 +243,19 @@
         .language-option {
             padding: 5px 12px;
             background: var(--white);
-            color: var(--dark);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
         }
         
         .language-option.active {
-            background: var(--primary-dark);
-            color: var(--dark);
+            background: var(--primary);
+            color: var(--white);
         }
         
         .language-option:not(.active):hover {
-            background: var(--primary);
+            background: rgba(67, 50, 171, 0.1); /* Teinte très légère du violet */
         }
         
         .menu-toggle { 
@@ -280,11 +267,11 @@
         
         /* Hero Section */
         .hero { 
-            background: linear-gradient(135deg, rgba(208, 225, 193, 0.2), rgba(186, 198, 151, 0.2)), url('https://github.com/MakesenSelection/vertuclean2/raw/main/nettoyage-lot-aveyron.png'); 
+            background: linear-gradient(135deg, rgba(67, 50, 171, 0.1), rgba(255, 87, 87, 0.1)), url('https://github.com/MakesenSelection/vertuclean2/raw/main/nettoyage-lot-aveyron.png'); 
             background-size: cover; 
             background-position: center; 
             color: var(--cream); 
-            padding: 180px 0 120px; 
+            padding: 300px 0 120px; /* Augmenté pour compenser le logo plus grand */
             text-align: center; 
         }
         
@@ -293,36 +280,32 @@
             font-weight: 700;
             line-height: 1.3;
             text-align: center;
-            color: var(--cream);
+            color: var(--dark); /* Reste en noir pour la lisibilité */
             margin-bottom: 2rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
-            color: var(--cream);
+            color: var(--dark); /* Reste en noir pour la lisibilité */
             margin-bottom: 3rem;
             line-height: 1.6;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero-location {
-            color: var(--cream);
+            color: var(--primary);
             font-size: 2rem;
             font-family: 'DM Serif Display', serif;
             font-weight: normal;
             margin-top: 1rem;
             margin-bottom: 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero p { 
-            color: var(--cream); 
+            color: var(--dark); /* Reste en noir pour la lisibilité */
             font-size: 1.2rem; 
             max-width: 700px; 
             margin: 0 auto 2.5rem; 
             line-height: 1.7;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
         
         .hero-btns { 
@@ -376,13 +359,14 @@
         
         .service-icon { 
             font-size: 2.5rem; 
-            color: var(--primary-dark); 
+            color: var(--primary); /* Icônes en violet */
             margin-bottom: 15px; 
         }
         
         .service-card h3 { 
             font-size: 1.5rem; 
             margin-bottom: 15px; 
+            color: var(--primary); /* Titres des cartes services en violet */
         }
         
         .service-features { 
@@ -397,7 +381,7 @@
         }
         
         .service-features li i { 
-            color: var(--primary-dark); 
+            color: var(--secondary); /* Puces en rouge/rose */
             margin-right: 10px; 
             margin-top: 4px; 
         }
@@ -406,17 +390,17 @@
         .service-link {
             display: inline-block;
             margin-top: 20px;
-            color: var(--primary-dark);
+            color: var(--primary);
             font-weight: 600;
             text-decoration: none;
-            border-bottom: 2px solid var(--primary-dark);
+            border-bottom: 2px solid var(--primary);
             padding-bottom: 2px;
             transition: var(--transition);
         }
 
         .service-link:hover {
-            color: var(--dark);
-            border-color: var(--dark);
+            color: var(--secondary);
+            border-color: var(--secondary);
         }
         
         /* Badge "Bientôt disponible" */
@@ -424,8 +408,8 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background: linear-gradient(45deg, var(--primary-dark), var(--secondary));
-            color: var(--dark);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--white);
             padding: 8px 15px;
             border-radius: 20px;
             font-weight: 700;
@@ -436,7 +420,7 @@
 
         /* Notice pour service à venir */
         .service-notice {
-            background-color: var(--primary);
+            background-color: rgba(67, 50, 171, 0.05);
             padding: 15px;
             border-radius: 8px;
             margin-top: 20px;
@@ -452,7 +436,11 @@
         
         /* About Section */
         .about { 
-            background-color: var(--primary); 
+            background-color: rgba(67, 50, 171, 0.05); /* Fond très subtil */
+        }
+        
+        .about h2, .about h3 {
+            color: var(--dark); /* Titres de la section about en noir pour lisibilité */
         }
         
         .about-content { 
@@ -484,6 +472,10 @@
             text-align: center; 
         }
         
+        .localisation h2 {
+            color: var(--dark); /* Titre en noir pour cette section */
+        }
+        
         .villes-list { 
             display: flex; 
             flex-wrap: wrap; 
@@ -494,15 +486,19 @@
         
         .ville-badge { 
             background-color: var(--primary); 
+            color: var(--white);
             padding: 8px 20px; 
             border-radius: 25px; 
             font-weight: 600; 
-            color: var(--dark); 
         }
         
         /* Contact Section */
         .contact { 
             background-color: var(--light); 
+        }
+        
+        .contact h2, .contact h3, .contact h4 {
+            color: var(--dark); /* Titres en noir pour cette section */
         }
         
         .contact-container { 
@@ -527,12 +523,12 @@
         .contact-icon { 
             width: 50px; 
             height: 50px; 
-            background-color: var(--primary-dark); 
+            background-color: var(--primary); 
             border-radius: 50%; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            color: var(--dark); 
+            color: var(--white); 
             font-size: 1.2rem; 
             margin-right: 15px; 
         }
@@ -540,7 +536,7 @@
         .language-badge {
             display: inline-block;
             background-color: var(--secondary);
-            color: var(--dark);
+            color: var(--white);
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.9rem;
@@ -556,6 +552,7 @@
             display: block; 
             margin-bottom: 8px; 
             font-weight: 500; 
+            color: var(--dark); 
         }
         
         .form-control { 
@@ -570,8 +567,8 @@
         
         .form-control:focus { 
             outline: none; 
-            border-color: var(--primary-dark); 
-            box-shadow: 0 0 0 3px rgba(186, 198, 151, 0.2); 
+            border-color: var(--primary); 
+            box-shadow: 0 0 0 3px rgba(67, 50, 171, 0.2); 
         }
         
         textarea.form-control { 
@@ -581,7 +578,7 @@
         
         /* Footer */
         footer { 
-            background-color: var(--dark); 
+            background-color: var(--primary); 
             color: var(--white); 
             padding: 60px 0 30px; 
         }
@@ -601,7 +598,7 @@
         }
         
         .footer-column p { 
-            color: rgba(255, 255, 255, 0.7); 
+            color: rgba(255, 255, 255, 0.8); 
         }
         
         .footer-links { 
@@ -613,13 +610,13 @@
         }
         
         .footer-links a { 
-            color: rgba(255, 255, 255, 0.7); 
+            color: rgba(255, 255, 255, 0.8); 
             text-decoration: none; 
             transition: var(--transition); 
         }
         
         .footer-links a:hover { 
-            color: var(--primary); 
+            color: var(--secondary); 
         }
         
         .social-links { 
@@ -634,7 +631,7 @@
             justify-content: center; 
             width: 40px; 
             height: 40px; 
-            background-color: rgba(255, 255, 255, 0.1); 
+            background-color: rgba(255, 255, 255, 0.2); 
             border-radius: 50%; 
             color: var(--white); 
             text-decoration: none; 
@@ -642,15 +639,15 @@
         }
         
         .social-links a:hover { 
-            background-color: #ff0000; 
+            background-color: var(--secondary); 
             transform: translateY(-3px); 
         }
         
         .copyright { 
             text-align: center; 
             padding-top: 30px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.1); 
-            color: rgba(255, 255, 255, 0.5); 
+            border-top: 1px solid rgba(255, 255, 255, 0.2); 
+            color: rgba(255, 255, 255, 0.6); 
             font-size: 0.9rem; 
         }
         
@@ -661,7 +658,7 @@
         body.english-version .lang-fr { display: none; }
         body.english-version .lang-en { display: block; }
         
-        /* Responsive - MODIF HEADER (3/4) */
+        /* Responsive */
         @media (max-width: 992px) { 
             h1 { 
                 font-size: 2.5rem; 
@@ -683,6 +680,14 @@
                 font-size: 1.7rem;
             }
             
+            .logo img {
+                height: 275px; /* Réduit proportionnellement */
+            }
+            
+            .hero {
+                padding: 275px 0 100px; /* Ajusté pour logo réduit */
+            }
+            
             .about-content { 
                 flex-direction: column; 
             } 
@@ -690,14 +695,6 @@
             .contact-container { 
                 flex-direction: column; 
             } 
-            
-            /* MODIF HEADER - Responsive tablette */
-            header {
-                height: 65px;
-            }
-            .logo img {
-                height: 55px;
-            }
             
             .footer-content { 
                 grid-template-columns: repeat(2, 1fr);
@@ -711,10 +708,10 @@
             
             nav ul { 
                 position: fixed; 
-                top: 60px; /* MODIF HEADER - Ajusté pour la nouvelle hauteur */
+                top: 70px; 
                 left: -100%; 
                 width: 100%; 
-                height: calc(100vh - 60px); /* MODIF HEADER */
+                height: calc(100vh - 70px); 
                 background-color: var(--white); 
                 flex-direction: column; 
                 align-items: center; 
@@ -748,16 +745,16 @@
                 font-size: 1.5rem;
             }
             
-            .language-switcher {
-                margin-top: 10px;
+            .logo img {
+                height: 250px; /* Réduit proportionnellement */
             }
             
-            /* MODIF HEADER - Responsive mobile */
-            header {
-                height: 60px;
+            .hero {
+                padding: 250px 0 80px; /* Ajusté pour logo réduit */
             }
-            .logo img {
-                height: 50px;
+            
+            .language-switcher {
+                margin-top: 10px;
             }
         }
         
@@ -767,7 +764,7 @@
             } 
             
             .hero { 
-                padding: 150px 0 80px; 
+                padding: 225px 0 60px; /* Ajusté pour logo réduit */
             } 
             
             .hero-title { 
@@ -786,6 +783,10 @@
                 font-size: 1rem; 
             } 
             
+            .logo img {
+                height: 225px; /* Réduit proportionnellement */
+            }
+            
             .services-grid { 
                 grid-template-columns: 1fr; 
             } 
@@ -794,49 +795,41 @@
                 grid-template-columns: 1fr;
             }
             
-            /* MODIF HEADER (4/4) - Responsive petit mobile */
-            header {
-                height: 55px;
-            }
-            .logo img {
-                height: 45px;
-            }
             nav ul { 
-                top: 55px; /* MODIF HEADER */
-                height: calc(100vh - 55px); /* MODIF HEADER */
+                top: 70px; 
+                height: calc(100vh - 70px); 
             }
         }
         /* Suppression de tout fond/blanc autour du logo */
-.logo,
-.logo img,
-.logo:hover,
-.logo img:hover {
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-}
+        .logo,
+        .logo img,
+        .logo:hover,
+        .logo img:hover {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            outline: none !important;
+        }
 
-/* Force la transparence du PNG */
-.logo img {
-    mix-blend-mode: normal;
-    background: transparent;
-}
+        /* Force la transparence du PNG */
+        .logo img {
+            mix-blend-mode: normal;
+            background: transparent;
+        }
 
-/* Vérification au survol */
-.logo img:hover {
-    background-color: transparent;
-    opacity: 0.9; /* Garde l'effet de survol si désiré */
-}
+        /* Vérification au survol */
+        .logo img:hover {
+            background-color: transparent;
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
-    <!-- Header avec nouveau logo - MODIF HEADER -->
+    <!-- Header avec logo agrandi x5 -->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="https://raw.githubusercontent.com/MakesenSelection/vertuclean2/9736504f42bea56ee3412a490277d73a32cba491/logobleu.png">
- 
+                <img src="https://raw.githubusercontent.com/MakesenSelection/vertuclean2/9736504f42bea56ee3412a490277d73a32cba491/logobleu.png" 
                      alt="VERTuCLEAN - Service de Nettoyage Écologique">
             </a>
             <div class="menu-toggle" id="menuToggle">
