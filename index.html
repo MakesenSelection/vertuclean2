@@ -806,6 +806,28 @@
                 height: calc(100vh - 55px); /* MODIF HEADER */
             }
         }
+        /* Suppression de tout fond/blanc autour du logo */
+.logo,
+.logo img,
+.logo:hover,
+.logo img:hover {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Force la transparence du PNG */
+.logo img {
+    mix-blend-mode: normal;
+    background: transparent;
+}
+
+/* Vérification au survol */
+.logo img:hover {
+    background-color: transparent;
+    opacity: 0.9; /* Garde l'effet de survol si désiré */
+}
     </style>
 </head>
 <body>
