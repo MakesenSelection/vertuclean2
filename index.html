@@ -175,15 +175,16 @@
         
         /* Header - MODIF HEADER (1/4) */
         header { 
-            background-color: var(--white); 
-            box-shadow: var(--shadow); 
-            position: fixed; 
-            width: 100%; 
-            top: 0; 
-            z-index: 1000; 
-            padding: 0; /* MODIF HEADER */
-            height: 70px; /* MODIF HEADER */
-        }
+    background-color: var(--white); 
+    box-shadow: var(--shadow); 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    padding: 0;
+    height: 70px; /* Conserve cette hauteur */
+    overflow: visible; /* Permet au logo de dépasser */
+}
         
         .header-container { 
             display: flex; 
@@ -194,18 +195,30 @@
         }
         
         /* Logo - MODIF HEADER (2/4) */
-        .logo { 
-            display: flex; 
-            align-items: center; 
-            height: 100%; 
-            padding: 5px 0; /* MODIF HEADER */
-        }
+      .logo { 
+    display: flex; 
+    align-items: center; 
+    height: 100%; 
+    padding: 0; /* Supprime le padding */
+    margin-top: -10px; /* Remonte le logo pour qu'il dépasse */
+}}
         
-        .logo img {
-            height: 60px; /* MODIF HEADER */
-            width: auto;
-            transition: var(--transition);
-        }
+      .logo img {
+    height: 100px;
+    width: auto;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1001;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)); /* Ombre légère */
+}
+
+.logo {
+    display: flex; 
+    align-items: center; 
+    height: 100%; 
+    padding: 0;
+    margin-top: -15px; /* Dépasse encore plus */
+}
         
         .logo img:hover {
             opacity: 0.9;
