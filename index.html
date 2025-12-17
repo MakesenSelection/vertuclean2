@@ -196,12 +196,12 @@
         }
         
         /* Logo - Agrandi x5 */
-       .logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-left: -30px; /* Ajoutez cette ligne */
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin-left: -30px;
+        }
 
         .logo img {
             height: 300px; /* Augmenté de 60px à 300px (x5) */
@@ -319,7 +319,7 @@
         /* Services Section */
         .services-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 350→300px pour meilleure adaptation */
             gap: 30px; 
             margin-top: 50px; 
         }
@@ -347,7 +347,8 @@
             width: 100%; 
             height: 100%; 
             object-fit: cover; 
-            transition: var(--transition); 
+            transition: var(--transition);
+            loading: lazy; /* Lazy loading natif */
         }
         
         .service-card:hover .service-image img { 
@@ -464,7 +465,8 @@
         .about-image img { 
             width: 100%; 
             height: auto; 
-            display: block; 
+            display: block;
+            loading: lazy; /* Lazy loading */
         }
         
         /* Localisation Section */
@@ -659,7 +661,39 @@
         body.english-version .lang-fr { display: none; }
         body.english-version .lang-en { display: block; }
         
-        /* Responsive */
+        /* Suppression de tout fond/blanc autour du logo */
+        .logo,
+        .logo img,
+        .logo:hover,
+        .logo img:hover {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        /* Force la transparence du PNG */
+        .logo img {
+            mix-blend-mode: normal;
+            background: transparent;
+        }
+
+        /* Vérification au survol */
+        .logo img:hover {
+            background-color: transparent;
+            opacity: 0.9;
+        }
+        
+        /* ===== OPTIMISATIONS RESPONSIVE ===== */
+        
+        /* Tablette Portrait & Paysage (768px - 992px) */
+        @media (min-width: 768px) and (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr); /* Force 2 colonnes sur tablettes */
+            }
+        }
+        
+        /* Responsive Général (< 992px) */
         @media (max-width: 992px) { 
             h1 { 
                 font-size: 2.5rem; 
@@ -702,23 +736,27 @@
             }
         }
         
+        /* Responsive Mobile (< 768px) */
         @media (max-width: 768px) { 
             .menu-toggle { 
                 display: block; 
             } 
             
+            /* CORRECTION CRITIQUE - Menu Mobile Optimisé */
             nav ul { 
                 position: fixed; 
                 top: 70px; 
                 left: -100%; 
                 width: 100%; 
-                height: calc(100vh - 70px); 
+                max-height: calc(100vh - 70px); /* max-height au lieu de height */
+                overflow-y: auto; /* Permet le scroll si menu trop long */
                 background-color: var(--white); 
                 flex-direction: column; 
                 align-items: center; 
                 justify-content: flex-start; 
-                padding-top: 50px; 
-                transition: var(--transition); 
+                padding: 30px 20px; /* Réduit padding-top */
+                transition: var(--transition);
+                z-index: 999; /* S'assure que le menu est au-dessus */
             } 
             
             nav ul.active { 
@@ -757,8 +795,15 @@
             .language-switcher {
                 margin-top: 10px;
             }
+            
+            /* CORRECTION - Inputs mobile (évite zoom iOS) */
+            .form-control {
+                font-size: 16px; /* iOS zoom si <16px */
+                padding: 14px 15px; /* Augmente légèrement */
+            }
         }
         
+        /* Responsive Très Petits Écrans (< 576px) */
         @media (max-width: 576px) { 
             section { 
                 padding: 60px 0; 
@@ -801,27 +846,34 @@
                 height: calc(100vh - 70px); 
             }
         }
-        /* Suppression de tout fond/blanc autour du logo */
-        .logo,
-        .logo img,
-        .logo:hover,
-        .logo img:hover {
-            background-color: transparent !important;
-            box-shadow: none !important;
-            border: none !important;
-            outline: none !important;
-        }
-
-        /* Force la transparence du PNG */
-        .logo img {
-            mix-blend-mode: normal;
-            background: transparent;
-        }
-
-        /* Vérification au survol */
-        .logo img:hover {
-            background-color: transparent;
-            opacity: 0.9;
+        
+        /* CORRECTION CRITIQUE - Très Très Petits Écrans (< 400px) */
+        @media (max-width: 400px) {
+            .hero-title { 
+                font-size: 1.5rem; 
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-location {
+                font-size: 1.2rem;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
         }
     </style>
 </head>
@@ -912,7 +964,7 @@
                 <!-- Service 1 - Vitres -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vitres-cleaning-lot-aveyron.jpg" alt="Nettoyage de vitres professionnel à Cahors, Figeac - Lot et Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vitres-cleaning-lot-aveyron.jpg" alt="Nettoyage de vitres professionnel à Cahors, Figeac - Lot et Aveyron" itemprop="image" loading="lazy">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
@@ -941,7 +993,7 @@
                 <!-- Service 2 - Textiles -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/canap-cleaning-lot-aveyron.jpg" alt="Nettoyage de textiles écologique canapés moquettes - Lot Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/canap-cleaning-lot-aveyron.jpg" alt="Nettoyage de textiles écologique canapés moquettes - Lot Aveyron" itemprop="image" loading="lazy">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
@@ -969,7 +1021,7 @@
                 <!-- Service 3 - Véhicules -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vehicule-cleaning-lot-aveyron.jpg" alt="Nettoyage de véhicules écologique intérieur extérieur - Lot Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/vehicule-cleaning-lot-aveyron.jpg" alt="Nettoyage de véhicules écologique intérieur extérieur - Lot Aveyron" itemprop="image" loading="lazy">
                     </div>
                     <div class="service-content">
                         <div class="service-icon">
@@ -999,7 +1051,7 @@
                 <!-- Service 4 - Fin de Chantier -->
                 <div class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-image">
-                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/post-construction-lot-aveyron.jpg" alt="Nettoyage de fin de chantier post-construction - Lot Aveyron" itemprop="image">
+                        <img src="https://github.com/MakesenSelection/vertuclean2/raw/main/post-construction-lot-aveyron.jpg" alt="Nettoyage de fin de chantier post-construction - Lot Aveyron" itemprop="image" loading="lazy">
                         <div class="coming-soon-badge">Bientôt disponible</div>
                     </div>
                     <div class="service-content">
@@ -1065,7 +1117,7 @@
     <section class="about" id="apropos">
         <div class="container">
             <h2 class="lang-fr">À Propos de VERTuCLEAN<br></h2>
-            <h2 class="lang-en">About VERTuCLEAN<br><></h2>
+            <h2 class="lang-en">About VERTuCLEAN<br></h2>
             <div class="about-content">
                 <div class="about-text">
                     <h3 class="lang-fr">Une Entreprise de Nettoyage Éthique et Écologique dans le Lot et l'Aveyron</h3>
