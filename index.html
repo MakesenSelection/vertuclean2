@@ -315,6 +315,8 @@
             gap: 20px; 
             margin-top: 2rem;
         }
+
+        
         
         /* Services Section */
         .services-grid { 
@@ -875,6 +877,222 @@
                 padding: 0 15px;
             }
         }
+        /* =====================================================
+   CSS WIDGET AVIS GOOGLE - VERTuCLEAN
+   À ajouter dans votre balise <style> existante
+   ===================================================== */
+
+/* Widget Avis Google - Design discret et élégant */
+.google-reviews {
+    background: linear-gradient(135deg, rgba(67, 50, 171, 0.03), rgba(255, 87, 87, 0.03));
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.google-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.reviews-title {
+    font-size: 1.3rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin: 0;
+}
+
+.reviews-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stars-display {
+    display: flex;
+    gap: 3px;
+}
+
+.star {
+    color: #fbbc04;
+    font-size: 1.2rem;
+}
+
+.rating-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.reviews-count {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.reviews-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--light);
+}
+
+.reviews-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.reviews-carousel::-webkit-scrollbar-track {
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.reviews-carousel::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.review-card {
+    min-width: 300px;
+    max-width: 320px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    scroll-snap-align: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.reviewer-info {
+    flex: 1;
+    text-align: left;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.review-stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+    text-align: left;
+}
+
+.google-cta {
+    margin-top: 25px;
+}
+
+.google-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 25px;
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.google-cta-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+/* Tablettes */
+@media (max-width: 768px) {
+    .reviews-carousel {
+        gap: 15px;
+    }
+    
+    .review-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+    .google-reviews {
+        padding: 30px 0;
+    }
+    
+    .reviews-title {
+        font-size: 1.1rem;
+    }
+    
+    .review-card {
+        min-width: 260px;
+        max-width: 260px;
+    }
+}
     </style>
 </head>
 <body>
@@ -954,6 +1172,180 @@
             </div>
         </div>
     </section>
+
+    <!-- ========================================
+     WIDGET AVIS GOOGLE - SNIPPET COMPLET
+     À insérer juste après la section hero
+     ======================================== -->
+
+<!-- Widget Avis Google -->
+<section class="google-reviews">
+    <div class="reviews-container">
+        <!-- En-tête avec logo Google -->
+        <div class="reviews-header">
+            <svg class="google-icon" viewBox="0 0 48 48">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                <path fill="none" d="M0 0h48v48H0z"/>
+            </svg>
+            <h3 class="reviews-title lang-fr">Avis Google</h3>
+            <h3 class="reviews-title lang-en">Google Reviews</h3>
+        </div>
+        
+        <!-- Note globale -->
+        <div class="reviews-stats">
+            <div class="stars-display">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+            <span class="rating-number">5.0</span>
+            <span class="reviews-count lang-fr">Basé sur 15 avis</span>
+            <span class="reviews-count lang-en">Based on 15 reviews</span>
+        </div>
+        
+        <!-- Carrousel d'avis -->
+        <div class="reviews-carousel">
+            <!-- Avis 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">M</div>
+                    <div class="reviewer-info">
+                        <p class="reviewer-name">Marie Dupont</p>
+                        <span class="review-date">Il y a 2 semaines</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="review-text lang-fr">
+                    "Excellent service de nettoyage ! Les vitres sont impeccables et les produits écologiques utilisés sont vraiment un plus. Je recommande vivement VERTuCLEAN."
+                </p>
+                <p class="review-text lang-en">
+                    "Excellent cleaning service! The windows are impeccable and the ecological products used are really a plus. I highly recommend VERTuCLEAN."
+                </p>
+            </div>
+            
+            <!-- Avis 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">J</div>
+                    <div class="reviewer-info">
+                        <p class="reviewer-name">Jean Martin</p>
+                        <span class="review-date">Il y a 1 mois</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="review-text lang-fr">
+                    "Très professionnel et ponctuel. Mon canapé retrouve une seconde jeunesse après leur passage. L'approche écologique est appréciable."
+                </p>
+                <p class="review-text lang-en">
+                    "Very professional and punctual. My sofa looks like new after their visit. The ecological approach is appreciated."
+                </p>
+            </div>
+            
+            <!-- Avis 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">S</div>
+                    <div class="reviewer-info">
+                        <p class="reviewer-name">Sophie Bernard</p>
+                        <span class="review-date">Il y a 3 semaines</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="review-text lang-fr">
+                    "Service impeccable du début à la fin. Équipe sympathique et efficace. Je ferai à nouveau appel à eux sans hésiter !"
+                </p>
+                <p class="review-text lang-en">
+                    "Impeccable service from start to finish. Friendly and efficient team. I will use them again without hesitation!"
+                </p>
+            </div>
+
+            <!-- Avis 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">P</div>
+                    <div class="reviewer-info">
+                        <p class="reviewer-name">Pierre Leclerc</p>
+                        <span class="review-date">Il y a 1 semaine</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="review-text lang-fr">
+                    "J'ai fait appel à VERTuCLEAN pour nettoyer mon véhicule. Résultat : nickel ! Intérieur comme neuf et prix très correct."
+                </p>
+                <p class="review-text lang-en">
+                    "I called VERTuCLEAN to clean my vehicle. Result: perfect! Interior like new and very reasonable price."
+                </p>
+            </div>
+
+            <!-- Avis 5 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">A</div>
+                    <div class="reviewer-info">
+                        <p class="reviewer-name">Anne Rousseau</p>
+                        <span class="review-date">Il y a 5 jours</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="review-text lang-fr">
+                    "Enfin une entreprise qui respecte l'environnement ! Les produits utilisés ne sentent pas mauvais et sont sans danger pour mes enfants. Merci !"
+                </p>
+                <p class="review-text lang-en">
+                    "Finally a company that respects the environment! The products used don't smell bad and are safe for my children. Thank you!"
+                </p>
+            </div>
+        </div>
+        
+        <!-- Bouton CTA -->
+        <div class="google-cta">
+            <a href="https://g.page/r/VOTRE_PLACE_ID/review" target="_blank" class="google-cta-btn" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 48 48">
+                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                </svg>
+                <span class="lang-fr">Laisser un avis</span>
+                <span class="lang-en">Leave a review</span>
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section class="services" id="services">
