@@ -11,14 +11,15 @@
     
     <style>
         :root { 
-            --primary: #d0e1c1; 
-            --primary-dark: #bac697; 
-            --secondary: #d7d7ae; 
+            --primary: #4332ab;     /* Violet du logo */
+            --primary-dark: #362790; /* Violet légèrement plus foncé */
+            --secondary: #ff5757;   /* Rouge/Rose du logo */
             --light: #f8f9fa; 
-            --dark: #4a5a3a; 
+            --dark: #2a2a2a;        /* Texte sombre */
             --text: #333333; 
             --text-light: #6c757d; 
             --white: #ffffff; 
+            --cream: #fefefe;
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
             --transition: all 0.3s ease; 
         }
@@ -74,7 +75,7 @@
             transform: translateX(-50%); 
             width: 80px; 
             height: 4px; 
-            background-color: var(--primary-dark); 
+            background-color: var(--secondary); 
         }
         
         p { 
@@ -85,8 +86,8 @@
         .btn { 
             display: inline-block; 
             padding: 12px 30px; 
-            background-color: var(--primary-dark); 
-            color: var(--dark); 
+            background-color: var(--primary); 
+            color: var(--white); 
             border: none; 
             border-radius: 50px; 
             font-weight: 600; 
@@ -97,17 +98,19 @@
         }
         
         .btn:hover { 
-            background-color: var(--primary); 
+            background-color: var(--primary-dark); 
             transform: translateY(-3px); 
+            color: var(--white);
         }
         
         .btn-secondary { 
             background-color: var(--secondary); 
-            color: var(--dark); 
+            color: var(--white); 
         }
         
         .btn-secondary:hover { 
-            background-color: #d0d09e; 
+            background-color: #e04a4a; 
+            color: var(--white);
         }
         
         /* Header */
@@ -118,32 +121,32 @@
             width: 100%; 
             top: 0; 
             z-index: 1000; 
+            padding: 0;
+            height: 70px;
         }
         
         .header-container { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            padding: 20px 0; 
+            padding: 0;
+            height: 100%;
         }
         
-        .logo { 
-            font-size: 1.8rem; 
-            font-weight: 700; 
-            color: var(--dark); 
-            text-decoration: none; 
-            display: flex; 
-            align-items: center; 
-            font-family: 'DM Serif Display', serif; 
-            letter-spacing: 0.5px; 
-            position: relative; 
-            padding: 5px 15px; 
+        /* Logo - Agrandi x5 comme page d'accueil */
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin-left: -30px;
         }
-        
-        .logo i { 
-            margin-right: 10px; 
-            font-size: 2rem; 
-            color: var(--primary-dark); 
+
+        .logo img {
+            height: 300px; /* Agrandi x5 */
+            width: auto;
+            transition: var(--transition);
+            position: relative;
+            top: 10px;
         }
         
         nav ul { 
@@ -164,13 +167,13 @@
         }
         
         nav ul li a:hover { 
-            color: var(--primary-dark); 
+            color: var(--primary); 
         }
         
         .language-switcher {
             display: flex;
             margin-left: 20px;
-            border: 1px solid var(--primary-dark);
+            border: 1px solid var(--primary);
             border-radius: 20px;
             overflow: hidden;
         }
@@ -178,19 +181,19 @@
         .language-option {
             padding: 5px 12px;
             background: var(--white);
-            color: var(--dark);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
         }
         
         .language-option.active {
-            background: var(--primary-dark);
-            color: var(--dark);
+            background: var(--primary);
+            color: var(--white);
         }
         
         .language-option:not(.active):hover {
-            background: var(--primary);
+            background: rgba(67, 50, 171, 0.1);
         }
         
         .menu-toggle { 
@@ -200,39 +203,41 @@
             color: var(--dark); 
         }
         
-        /* Hero Section */
+        /* Hero Section - MÊME STYLE QUE PAGE D'ACCUEIL */
         .hero { 
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('carprices.jpg'); 
+            background: linear-gradient(135deg, rgba(67, 50, 171, 0.1), rgba(255, 87, 87, 0.1)), url('https://github.com/MakesenSelection/vertuclean2/raw/main/vehicule-cleaning-lot-aveyron.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-attachment: fixed;
-            color: var(--white); 
-            padding: 180px 0 120px; 
+            color: var(--cream); 
+            padding: 300px 0 120px; 
             text-align: center; 
             position: relative;
         }
         
         .hero-title {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.2;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.3;
             text-align: center;
             color: var(--white);
-            margin-bottom: 1.5rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
             color: var(--white);
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-            text-shadow: 0 2px 6px rgba(0,0,0,0.8);
-            font-weight: 500;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .hero-location {
+            color: var(--primary);
+            font-size: 2rem;
+            font-family: 'DM Serif Display', serif;
+            font-weight: normal;
+            margin-top: 1rem;
+            margin-bottom: 0;
         }
         
         .hero-text {
@@ -240,10 +245,13 @@
             color: var(--white);
             margin-bottom: 3rem;
             line-height: 1.6;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.8);
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+        }
+        
+        .hero-text p {
+            color: var(--white);
         }
         
         .hero-btns { 
@@ -253,6 +261,27 @@
             margin-top: 2rem;
         }
         
+        /* Suppression de tout fond autour du logo */
+        .logo,
+        .logo img,
+        .logo:hover,
+        .logo img:hover {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        .logo img {
+            mix-blend-mode: normal;
+            background: transparent;
+        }
+
+        .logo img:hover {
+            background-color: transparent;
+            opacity: 0.9;
+        }
+
         /* Tarifs Section */
         .tarifs-intro {
             text-align: center;
@@ -285,21 +314,29 @@
         .formule-header {
             padding: 25px;
             text-align: center;
-            background-color: var(--primary);
+            background-color: rgba(67, 50, 171, 0.1);
         }
         
         .formule-premium .formule-header {
-            background-color: var(--primary-dark);
+            background-color: rgba(67, 50, 171, 0.15);
         }
         
         .formule-luxe .formule-header {
-            background: linear-gradient(45deg, var(--primary-dark), var(--secondary));
+            background: linear-gradient(45deg, rgba(67, 50, 171, 0.15), rgba(255, 87, 87, 0.1));
         }
         
         .formule-icon {
             font-size: 3rem;
-            color: var(--dark);
+            color: var(--primary);
             margin-bottom: 15px;
+        }
+        
+        .formule-header h3 {
+            color: var(--primary);
+        }
+        
+        .formule-header p {
+            color: var(--dark);
         }
         
         .formule-content {
@@ -318,7 +355,7 @@
         }
         
         .formule-features li i {
-            color: var(--primary-dark);
+            color: var(--secondary);
             margin-right: 10px;
             margin-top: 4px;
             flex-shrink: 0;
@@ -328,7 +365,7 @@
             text-align: center;
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--primary);
             margin-bottom: 20px;
         }
         
@@ -354,8 +391,8 @@
         }
         
         .tarifs-table th {
-            background-color: var(--primary-dark);
-            color: var(--dark);
+            background-color: var(--primary);
+            color: var(--white);
             padding: 15px;
             text-align: center;
             font-weight: 600;
@@ -372,7 +409,7 @@
         }
         
         .tarifs-table tr:hover {
-            background-color: var(--primary);
+            background-color: rgba(67, 50, 171, 0.05);
         }
         
         .vehicle-type {
@@ -391,7 +428,7 @@
         
         /* Section Utilitaires */
         .utilitaires {
-            background-color: var(--primary);
+            background-color: rgba(67, 50, 171, 0.05);
             border-radius: 10px;
             padding: 40px;
             margin-top: 60px;
@@ -402,6 +439,11 @@
             margin-bottom: 30px;
         }
         
+        .utilitaires-header h2,
+        .utilitaires-header p {
+            color: var(--dark);
+        }
+        
         .utilitaires-content {
             display: flex;
             align-items: center;
@@ -410,6 +452,10 @@
         
         .utilitaires-text {
             flex: 1;
+        }
+        
+        .utilitaires-text h3 {
+            color: var(--primary);
         }
         
         .utilitaires-image {
@@ -432,6 +478,11 @@
             padding: 40px;
             margin-top: 60px;
             text-align: center;
+        }
+        
+        .deplacement h2,
+        .deplacement p {
+            color: var(--dark);
         }
         
         .deplacement-grid {
@@ -458,12 +509,12 @@
         .deplacement-price {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: var(--primary);
         }
         
         /* Footer */
         footer { 
-            background-color: var(--dark); 
+            background-color: var(--primary); 
             color: var(--white); 
             padding: 60px 0 30px; 
         }
@@ -483,7 +534,7 @@
         }
         
         .footer-column p { 
-            color: rgba(255, 255, 255, 0.7); 
+            color: rgba(255, 255, 255, 0.8); 
         }
         
         .footer-links { 
@@ -495,13 +546,13 @@
         }
         
         .footer-links a { 
-            color: rgba(255, 255, 255, 0.7); 
+            color: rgba(255, 255, 255, 0.8); 
             text-decoration: none; 
             transition: var(--transition); 
         }
         
         .footer-links a:hover { 
-            color: var(--primary); 
+            color: var(--secondary); 
         }
         
         .social-links { 
@@ -516,7 +567,7 @@
             justify-content: center; 
             width: 40px; 
             height: 40px; 
-            background-color: rgba(255, 255, 255, 0.1); 
+            background-color: rgba(255, 255, 255, 0.2); 
             border-radius: 50%; 
             color: var(--white); 
             text-decoration: none; 
@@ -524,15 +575,15 @@
         }
         
         .social-links a:hover { 
-            background-color: #ff0000; 
+            background-color: var(--secondary); 
             transform: translateY(-3px); 
         }
         
         .copyright { 
             text-align: center; 
             padding-top: 30px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.1); 
-            color: rgba(255, 255, 255, 0.5); 
+            border-top: 1px solid rgba(255, 255, 255, 0.2); 
+            color: rgba(255, 255, 255, 0.6); 
             font-size: 0.9rem; 
         }
         
@@ -542,16 +593,6 @@
         
         body.english-version .lang-fr { display: none; }
         body.english-version .lang-en { display: block; }
-        
-        /* Style pour les sous-titres en blanc */
-        .tarifs-intro p,
-        .hero-subtitle,
-        .hero-text p,
-        .table-subtitle,
-        .utilitaires-header p,
-        .deplacement p {
-            color: var(--white) !important;
-        }
         
         /* Responsive */
         @media (max-width: 992px) { 
@@ -571,6 +612,14 @@
                 font-size: 1.3rem;
             }
             
+            .logo img {
+                height: 275px;
+            }
+            
+            .hero {
+                padding: 275px 0 100px;
+            }
+            
             .utilitaires-content { 
                 flex-direction: column; 
             } 
@@ -583,16 +632,18 @@
             
             nav ul { 
                 position: fixed; 
-                top: 80px; 
+                top: 70px; 
                 left: -100%; 
                 width: 100%; 
-                height: calc(100vh - 80px); 
+                max-height: calc(100vh - 70px); 
+                overflow-y: auto;
                 background-color: var(--white); 
                 flex-direction: column; 
                 align-items: center; 
                 justify-content: flex-start; 
-                padding-top: 50px; 
-                transition: var(--transition); 
+                padding: 30px 20px;
+                transition: var(--transition);
+                z-index: 999;
             } 
             
             nav ul.active { 
@@ -618,6 +669,11 @@
             
             .hero {
                 background-attachment: scroll;
+                padding: 250px 0 80px;
+            }
+            
+            .logo img {
+                height: 250px;
             }
             
             .tarifs-table {
@@ -636,7 +692,7 @@
             } 
             
             .hero { 
-                padding: 150px 0 80px; 
+                padding: 225px 0 60px; 
             } 
             
             .hero-title { 
@@ -645,6 +701,10 @@
             
             .hero-subtitle {
                 font-size: 1.1rem;
+            }
+            
+            .logo img {
+                height: 225px;
             }
             
             .formules-grid { 
@@ -661,8 +721,8 @@
     <header>
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <i class="fas fa-leaf"></i>
-                VERTuCLEAN
+                <img src="https://raw.githubusercontent.com/MakesenSelection/vertuclean2/9736504f42bea56ee3412a490277d73a32cba491/logobleu.png" 
+                     alt="VERTuCLEAN - Service de Nettoyage Écologique">
             </a>
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -684,7 +744,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - MÊME STYLE QUE PAGE D'ACCUEIL -->
     <section class="hero" id="accueil">
         <div class="container">
             <div class="lang-fr">
@@ -1078,7 +1138,7 @@
                 <p class="lang-fr">Nous nous déplaçons directement chez vous dans le Lot et l'Aveyron</p>
                 <p class="lang-en">We come directly to your location in Lot and Aveyron</p>
                 
-                    
+                <div class="deplacement-grid">    
                     <div class="deplacement-card">
                         <div class="deplacement-distance lang-fr">De 10 à 20km</div>
                         <div class="deplacement-distance lang-en">From 10km to 20km</div>
@@ -1097,6 +1157,7 @@
                         <div class="deplacement-price">+28€</div>
                     </div>
                 </div>
+            </div>
             
         </div>
     </section>
